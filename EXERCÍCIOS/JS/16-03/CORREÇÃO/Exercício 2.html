@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variável Global</title>
+</head>
+<body>
+    Informe seu Salário: <input id="Salario" type="text"> <br>
+    <button onclick="Grana()">Confirmar Salário</button> 
+    <div id="GranaAtual"></div>
+    <div id="Botoes"></div>
+</body>
+</html>
+
+<script>
+
+    var Sal = 0;
+
+    function Grana(){
+    Sal = Salario.value;
+
+    GranaAtual.innerHTML=`
+    Grana atual: ${Sal}<br> `
+
+    Botoes.innerHTML=`
+    <button onclick="PagarC()">Pagar Conta de 100</button>
+    <button onclick="PagarQ()">Pagar Conta de 500</button>
+    <button onclick="Ganhar()">Ganhar 2000 na Loteria</button>`
+    }
+
+    function PagarC(){
+    Sal -= 100;
+
+    GranaAtual.innerHTML=`
+    Grana atual: ${Sal.toLocaleString("PT-BR", {style :'currency', currency: "BRL"})}<br> `
+
+    }
+
+    function PagarQ(){        
+    Sal -= 500;
+
+    GranaAtual.innerHTML=`
+    Grana atual: ${Sal.toLocaleString("PT-BR", {style :'currency', currency: "BRL"})}<br> `
+    }
+
+    function Ganhar(){        
+    Sal += 2000;
+
+    GranaAtual.innerHTML=`
+    Grana atual: ${Sal.toLocaleString("PT-BR", {style :'currency', currency: "BRL"})}<br> `
+    }
+
+</script>

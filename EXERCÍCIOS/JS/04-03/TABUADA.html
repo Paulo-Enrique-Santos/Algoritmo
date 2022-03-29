@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="PTBR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body background="https://static.vecteezy.com/ti/vetor-gratis/p1/104417-simbolo-matematico-desenhado-a-mao-gr%C3%A1tis-vetor.jpg">
+
+    <div style="width: 20%;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background-color: palegoldenrod;
+    border-color: black;
+    border-style: solid;
+    border-radius: 30px;">
+
+    <h1 style="text-align: center;
+    font-family: cursive;
+    margin-top: 5px;
+    margin-bottom: 5px;">Escolha o Numero</h1>
+
+    <input type="text"
+    style="width: 25%;
+    margin-left: 36%;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    border-color: black;
+    text-align: center;"
+    placeholder="Ex: 9"
+    id="Numero"><br>
+
+    <button style="width: 35%;
+    border-radius: 30px;
+    border-color: black;
+    font-family: cursive;
+    background-color: white;
+    margin-left: 32.6%;
+    margin-bottom: 10px;"
+    onclick="VerTabuada()">
+        Ver Tabuada
+    </button>
+
+        <div id="Tabuada">
+
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    function VerTabuada(){
+        var NMR     = Number(Numero.value);
+
+        Tabuada.innerHTML = '<h3 style="text-align: center;font-family: cursive;margin-top: 0px;margin-bottom: 0px;">Resultado</h3><br>' + 
+        '<h5 style="text-align: center;font-family: cursive;margin-top: 0px;margin-bottom: 0px;">' + NMR +' x 1 = '+ NMR*1 + '</h5><br>' +
+        '<h5 style="text-align: center;font-family: cursive;margin-top: 0px;margin-bottom: 0px;">' + NMR +' x 2 = '+ NMR*2 + '</h5><br>' +
+        '<h5 style="text-align: center;font-family: cursive;margin-top: 0px;margin-bottom: 0px;">' + NMR +' x 3 = '+ NMR*3 + '</h5><br>' +
+        '<h5 style="text-align: center;font-family: cursive;margin-top: 0px;margin-bottom: 0px;">' + NMR +' x 4 = '+ NMR*4 + '</h5><br>' +
+        '<h5 style="text-align: center;font-family: cursive;margin-top: 0px;margin-bottom: 0px;">' + NMR +' x 5 = '+ NMR*5 + '</h5><br>' +
+        '<h5 style="text-align: center;font-family: cursive;margin-top: 0px;margin-bottom: 0px;">' + NMR +' x 6 = '+ NMR*6 + '</h5><br>' +
+        '<h5 style="text-align: center;font-family: cursive;margin-top: 0px;margin-bottom: 0px;">' + NMR +' x 7 = '+ NMR*7 + '</h5><br>' +
+        '<h5 style="text-align: center;font-family: cursive;margin-top: 0px;margin-bottom: 0px;">' + NMR +' x 8 = '+ NMR*8 + '</h5><br>' +
+        '<h5 style="text-align: center;font-family: cursive;margin-top: 0px;margin-bottom: 0px;">' + NMR +' x 9 = '+ NMR*9 + '</h5><br>' +
+        '<h5 style="text-align: center;font-family: cursive;margin-top: 0px;margin-bottom: 0px;">' + NMR +' x 10 = '+ NMR*10 + '</h5><br>';
+    }
+</script>

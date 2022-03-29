@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="PTBR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleição</title>
+</head>
+<body>
+
+<!--DIV MÃE ---------------------------------------------------------------------->    
+    <div id="Resultado">
+
+<!--DIV 1 TITULOS E FECHAMENTO ---------------------------------------------------------------------->    
+        <div id="Div1">
+            <h2 id="Titulo"
+            style="font-family: cursive;
+            color: darkmagenta;
+            margin-top: 7px;
+            margin-bottom: 0px;
+            float: left;
+            margin-left: 29%;"></h2>
+
+            <button id="Fechar"
+            style="background-color: white;
+            border-color: white;
+            border-style: solid;
+            float: right;
+            margin-top: 12px;
+            margin-right: 5px;
+            color: darkorchid;
+            font-size: large;"
+            onclick="FecharPainel()">
+            
+            </button>
+        </div>
+
+<!--DIV 2 TOTAL DE VOTOS ---------------------------------------------------------------------->    
+
+        <div id="Div2">
+            <h4 id="Votos"
+            style="font-family: cursive;
+            color: darkorchid;
+            margin-top: 1px;
+            margin-bottom: 0px;
+            float: left;
+            margin-left: 8px;"></h4>
+        </div>
+
+<!--DIV 3 CANDIDATO VENCEDOR ---------------------------------------------------------------------->    
+
+        <div id="Div3">
+            <h4 id="CandidatoVencedor"
+            style="font-family: cursive;
+            color: darkorchid;
+            margin-top: 1px;
+            margin-bottom: 0px;
+            float: left;
+            margin-left: 8px;"></h4>
+
+        </div>
+
+<!--DIV 4 NIVEL DO VENCEDOR ---------------------------------------------------------------------->    
+
+        <div id="Div4">
+            
+        </div>
+
+<!--DIV 5 CANDIDATO PERDEDOR ---------------------------------------------------------------------->    
+
+        <div id="Div5">
+            <h4 id="CandidatoPerdedor"
+            style="font-family: cursive;
+            color: darkorchid;
+            margin-top: 1px;
+            margin-bottom: 0px;
+            float: left;
+            margin-left: 8px;"></h4>
+
+        </div>
+
+<!--DIV 6 NIVEL DO PERDEDOR ---------------------------------------------------------------------->    
+
+        <div id="Div6">
+
+        </div>
+
+<!--DIV 7 VOTOS INVÁLIDOS ---------------------------------------------------------------------->    
+
+        <div id="Div7">
+            <h4 id="Invalidos"
+            style="font-family: cursive;
+            color: darkorchid;
+            margin-top: 1px;
+            margin-bottom: 0px;
+            float: left;
+            margin-left: 8px;"></h4>
+
+        </div>
+
+<!--DIV DIV 8 NIVEL DE VOTOS INVÁLIDOS ---------------------------------------------------------------------->    
+
+        <div id="Div8">
+
+        </div>
+
+    </div>
+
+<!--PAINEL DO FORMULÁRIO ---------------------------------------------------------------------->    
+
+    <div style="border-radius: 30px;
+    border-color: darkorchid;
+    border-style: solid;
+    width: 350px;
+    height: 300px;
+    position: static;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 13%;">
+
+<!-- TITULO ---------------------------------------------------------------------->    
+        <div style="width: 340px;
+        height: 40px;
+        margin-left: 5px;
+        margin-top: 5px;
+        float: left;">
+        <h1 style="margin-top: 0px;
+        margin-bottom: 0px;
+        text-align: center;
+        color: darkmagenta;
+        font-family: cursive;">Apuração de Votos</h1>
+        </div>
+
+<!--TITULOS DO FORMULÁRIO ---------------------------------------------------------------------->    
+
+        <div style="height: 200px;
+        width: 170px;
+        float: left;
+        margin-left: 5px;
+        margin-top: 5px;">
+        <h3 style="margin-top: 25px;
+        margin-bottom: 15px;
+        text-align: center;
+        color: darkorchid;
+        font-family: cursive;">Candidato A:</h3>
+        
+        <h3 style="margin-top: 0px;
+        margin-bottom: 15px;
+        text-align: center;
+        color: darkorchid;
+        font-family:cursive;">Candidato B:</h3>
+        
+        <h3 style="margin-top: 0px;
+        margin-bottom: 15px;
+        text-align: center;
+        color: darkorchid;
+        font-family:cursive;">Brancos:</h3>
+        
+        <h3 style="margin-top: 0px;
+        margin-bottom: 0px;
+        text-align: center;
+        color: darkorchid;
+        font-family:cursive">Nulos:</h3>
+        </div>
+
+<!--INPUTS ---------------------------------------------------------------------->    
+
+        <div style="height: 200px;
+        width: 170px;
+        margin-top: 5px;
+        float: left;">
+
+        <input type="number" 
+        style="width: 153px;
+        margin-left: 5px;
+        margin-top: 28px;
+        margin-bottom: 15px;
+        border-radius: 30px;
+        border-color: darkorchid;
+        border-style: solid;
+        font-family: cursive;
+        text-align: center;
+        outline-color: darkmagenta;"
+        id="CandidatoA"
+        placeholder="Ex: 962">
+
+
+        <input type="number" 
+        style="width: 153px;
+        margin-left: 5px;
+        margin-top: 0px;
+        margin-bottom: 15px;
+        border-radius: 30px;
+        border-color: darkorchid;
+        border-style: solid;
+        font-family: cursive;
+        text-align: center;
+        outline-color: darkmagenta;"
+        id="CandidatoB"
+        placeholder="Ex: 784">
+        
+        <input type="number" 
+        style="width: 153px;
+        margin-left: 5px;
+        margin-top: 0px;
+        margin-bottom: 15px;
+        border-radius: 30px;
+        border-color: darkorchid;
+        border-style: solid;
+        font-family: cursive;
+        text-align: center;
+        outline-color: darkmagenta;"
+        id="Brancos"
+        placeholder="Ex: 299">
+        
+        <input type="number" 
+        style="width: 153px;
+        margin-left: 5px;
+        margin-top: 0px;
+        margin-bottom: 19px;
+        border-radius: 30px;
+        border-color: darkorchid;
+        border-style: solid;
+        font-family: cursive;
+        text-align: center;
+        outline-color: darkmagenta;"
+        id="Nulos"
+        placeholder="Ex: 239">
+        
+        </div>
+
+<!--BOTÃO ---------------------------------------------------------------------->    
+
+        <div style="width: 340px;
+        height: 40px;
+        float: left;
+        margin-top: 5px;
+        margin-left: 5px;">
+        
+        <button style="margin-top: 7px;
+        height: 26px;
+        width: 200px;
+        margin-left: 70px;
+        background-color: darkorchid;
+        color: white;
+        border-radius: 30px;
+        border-style: solid;
+        border-color: darkorchid;
+        font-family: cursive;
+        outline-color: darkmagenta;"
+        onclick="AnalisarDados()"><b>Resultado da Eleição</b></button>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function AnalisarDados(){
+        var C1      = Number(CandidatoA.value);
+        var C2      = Number(CandidatoB.value);
+        var BCO     = Number(Brancos.value);
+        var NUL     = Number(Nulos.value);
+        var INVA    = BCO + NUL;
+        var TOTAL   = C1 + C2 + INVA;
+        var P1      = ((C1 / TOTAL)*100).toFixed(2);
+        var P2      = ((C2 / TOTAL)*100).toFixed(2);
+        var P3      = ((INVA / TOTAL)*100).toFixed(2);
+
+        Resultado.style.borderRadius="25px";
+        Resultado.style.borderColor= "darkorchid";
+        Resultado.style.borderStyle= "solid";
+        Resultado.style.height= "310px";
+        Resultado.style.marginLeft= "auto";
+        Resultado.style.marginRight= "auto";
+        Resultado.style.marginTop= "13%";
+        Resultado.style.marginBottom= "25%";
+        Resultado.style.width = "500px";
+        Resultado.style.position = "relative";
+
+        Fechar.innerHTML = "X";
+        Titulo.innerHTML = "Resultado Eleição";
+        Votos.innerHTML = "Total de Votos: " + TOTAL;
+        if(C1>=C2){
+        CandidatoVencedor.innerHTML = "Candidato Vencedor (A): " + P1 + "% " + "(" + C1 + " Votos)";    
+        CandidatoPerdedor.innerHTML = "Candidato Perdedor (B): " + P2 + "% " + "(" + C2 + " Votos)";    
+        document.title = "Candidato A Venceu!"
+        }else{
+        CandidatoVencedor.innerHTML = "Candidato Vencedor (B): " + P2 + "% " + "(" + C2 + " Votos)";    
+        CandidatoPerdedor.innerHTML = "Candidato Perdedor (A): " + P1 + "% " + "(" + C1 + " Votos)";    
+        document.title = "Candidato B Venceu!"
+        }
+        Invalidos.innerHTML = "Inválidos: " + P3 + "% " + "(" + INVA + " Votos)";
+
+        Div1.style.height = "50px";
+        Div1.style.width = "100%";
+        Div1.style.borderRadius = "50px";
+
+        Div2.style.height = "25px";
+        Div2.style.width = "100%";
+
+        Div3.style.height = "25px";
+        Div3.style.width = "100%";
+
+        Div4.style.height = "50px";
+        if(C1>C2){
+        Div4.style.width = P1 + "%";}else{
+        Div4.style.width = P2 + "%";}
+        if(C1==C2){
+        Div4.style.backgroundColor ="gray";
+        document.title = "Não Houve Ganhador"}else{
+        Div4.style.backgroundColor ="green";}
+
+        Div5.style.height = "25px";
+        Div5.style.width = "100%";
+
+        Div6.style.height = "50px";
+        Div6.style.width = "100%";
+        if(C1>C2){
+        Div6.style.width = P2 + "%";}else{
+        Div6.style.width = P1 + "%";}
+        if(C1==C2){
+        Div6.style.backgroundColor ="gray";}else{
+        Div6.style.backgroundColor ="red";}
+
+        Div7.style.height = "25px";
+        Div7.style.width = "100%";
+
+        Div8.style.height = "50px";
+        Div8.style.width = P3 + "%";
+        Div8.style.backgroundColor ="Gray";
+
+    }
+
+    function FecharPainel(){
+        Resultado.style.borderRadius="0px";
+        Resultado.style.borderColor= "white";
+        Resultado.style.borderStyle= "solid";
+        Resultado.style.height= "0px";
+        Resultado.style.marginLeft= "0%";
+        Resultado.style.marginRight= "0%";
+        Resultado.style.marginTop= "0%";
+        Resultado.style.marginBottom= "0%";
+        Resultado.style.width = "0px";
+        Resultado.style.position = "relative";
+
+        Fechar.innerHTML = "";
+        Titulo.innerHTML = "";
+        Votos.innerHTML = "";
+        CandidatoVencedor.innerHTML = "";
+        CandidatoPerdedor.innerHTML = "";
+        Invalidos.innerHTML = "";
+        CandidatoA.value = "";
+        CandidatoB.value = "";
+        Nulos.value = "";
+        Brancos.value = "";
+        document.title = "Eleição"
+
+        Div1.style.height = "0px";
+        Div1.style.width = "0%";
+        Div1.style.borderRadius = "0px";
+
+        Div2.style.height = "px";
+        Div2.style.width = "0%";
+
+        Div3.style.height = "0px";
+        Div3.style.width = "0%";
+
+        Div4.style.height = "0px";
+        Div4.style.width = "0%";
+
+        Div5.style.height = "0px";
+        Div5.style.width = "0%";
+
+        Div6.style.height = "0px";
+        Div6.style.width = "0%";
+
+        Div7.style.height = "0px";
+        Div7.style.width = "0%";
+
+        Div8.style.height = "0px";
+        Div8.style.width = "0%";
+
+
+    }
+</script>

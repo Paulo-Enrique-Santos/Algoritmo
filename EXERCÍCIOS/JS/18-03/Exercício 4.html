@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calcule a Potência</h1>
+    Informe Dois Números: 
+    <input type="text" id="N1">
+    <input type="text" id="N2">
+    <button onclick="Calcular()">Fazer Potência</button>
+    <div id="Resultado"></div>
+
+</body>
+</html>
+
+<script>
+    function Calcular(){
+        var Pot = N1.value ** N2.value
+
+        Resultado.innerHTML = ` ${N1.value} elevado a ${N2.value} <br>
+        O Resultado é: ${Pot}`
+    }
+</script>

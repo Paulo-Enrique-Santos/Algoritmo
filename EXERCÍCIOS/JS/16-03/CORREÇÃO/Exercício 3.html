@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="color: blue;" id="Resultado">
+        Total Guardado no cofrinho: R$0,00 <br>
+        Depósitos Efetuados: 0 <br>
+        Retiradas efetuadas: 0
+    </div>
+
+    <button onclick="Cinquenta()">
+        Depositar R$0,50
+    </button>
+
+    <button onclick="Dois()">
+        Depositar R$2,00
+    </button>
+
+    <button onclick="Zerar()">
+        Limpar Cofrinho
+    </button>
+
+    <button onclick="RetirarCinquenta()">
+        Retirar R$0,50
+    </button>
+
+    <button onclick="RetirarDois()">
+        Retirar R$2,00
+    </button>
+    
+</body>
+
+</html>
+<script>
+
+    var Deposito        = 0
+    var TotalCofre      = 0
+    var Retiradas       = 0
+
+function Cinquenta() {
+    
+    Deposito++
+    TotalCofre += 0.5
+    
+    
+    Resultado.innerHTML = `
+        Total Guardado no cofrinho: ${TotalCofre.toLocaleString("PT-BR", { style: 'currency', currency: "BRL" })} <br>
+        Depósitos Efetuados: ${Deposito} <br>
+        Retiradas efetuadas: ${Retiradas}`
+
+}
+
+function Dois() {
+
+    Deposito++
+    TotalCofre += 2
+
+    Resultado.innerHTML = `
+        Total Guardado no cofrinho: ${TotalCofre.toLocaleString("PT-BR", { style: 'currency', currency: "BRL" })} <br>
+        Depósitos Efetuados: ${Deposito}  <br>
+        Retiradas efetuadas: ${Retiradas}`
+
+}
+
+function Zerar(){
+
+    Deposito = 0
+    TotalCofre = 0
+    Retiradas = 0
+
+    Resultado.innerHTML = `
+        Total Guardado no cofrinho: R$0,00 <br>
+        Depósitos Efetuados: 0  <br>
+        Retiradas efetuadas: 0`
+    
+}
+
+function RetirarCinquenta() {
+    
+    TotalCofre -= 0.5
+    Retiradas++
+    
+    Resultado.innerHTML = `
+        Total Guardado no cofrinho: ${TotalCofre.toLocaleString("PT-BR", { style: 'currency', currency: "BRL" })} <br>
+        Depósitos Efetuados: ${Deposito}  <br>
+        Retiradas efetuadas: ${Retiradas}`
+
+}
+
+function RetirarDois() {
+
+    TotalCofre -= 2
+    Retiradas++
+
+    Resultado.innerHTML = `
+        Total Guardado no cofrinho: ${TotalCofre.toLocaleString("PT-BR", { style: 'currency', currency: "BRL" })} <br>
+        Depósitos Efetuados: ${Deposito} <br>
+        Retiradas efetuadas: ${Retiradas}`
+
+}
+
+</script>

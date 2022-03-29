@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="PTBR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melhor Faculdade</title>
+</head>
+<body>
+    <!-- CAMPO DE TEXTO-->
+    <!--<input type="text" 
+    value="SPTech">-->
+   <div>
+        <div>
+            <h4 style="margin-top: 0px;
+            margin-bottom: 3px;
+            color: dodgerblue;">Digite o Nome da Melhor Faculdade de Tecnologia do Brasil</h4>
+        </div>
+        <div style="margin-left: 10%;">
+            <!--CAMPO DE TEXTO-->
+            <input type="text"; 
+            maxlength="6";
+            placeholder="Exemplo: SPTech";
+            id="NomeFaculdade";>
+            <button style="color: white;
+            background-color: dodgerblue;
+            border-color: dodgerblue;
+            border-radius: 30px;
+            border-style: solid;" 
+            onclick="MostrarFaculdade()">
+                Ok
+            </button>
+        </div>
+   </div>
+</body>
+</html>
+
+<script>
+    function MostrarFaculdade(){
+        alert("A FACULDADE " + NomeFaculdade.value + 
+        " É A MELHOR MESMO");}
+</script>

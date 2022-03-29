@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="PTBR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempo Real -</title>
+</head>
+<body>
+    
+<div style="width: 100%;
+height: 800px;
+float: left;"> 
+
+<!-- BOTÃO TEMPO REAL--------------------------------------------------------------------------->
+
+<DIV style="width: 100%;
+height: 20px;
+float: left;
+margin-bottom: 0px;">
+
+        <b style="margin-left: 45%;
+        font-family: cursive;">Tempo Real do Jogo</b>
+
+
+</DIV>
+
+
+<!-- DIV CIMA--------------------------------------------------------------------------->
+
+<div style="width: 100%;
+height: 100px;
+margin-top: 0px;
+float: left;;">
+
+    <button style="width: 10%;
+    height: 60px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 0%;
+    font-family: cursive;
+    border-radius: 30px;
+    border-style: solid;
+    color: #000;
+    background-color: white;
+    border-color: #000;"
+    onclick="BotaoBrasil()">
+        <B>Gol do Brasil </b>
+    </button>
+
+    <div style="
+    margin-left: 10%;
+    margin-right: 9%;
+    width: 41%;
+    height: 90px;
+    margin-top: 5px;
+    float: left;">
+
+    
+    <h1 style="margin-top: 22px;
+    margin-bottom: 0px;
+    margin-left: 14%;
+    margin-right: 0%;
+    float: left;
+    font-family: cursive;"
+    id="Margem">Brasil</h1>
+
+    <img src="https://rlv.zcache.com.br/adesivo_redondo_bandeira_nacional_de_brasil-r36f349c66d704dcdb1db1a97133d5364_0ugmp_8byvr_540.jpg"
+    style="float: left;
+    width: 60px;
+    height: 60px;
+    margin-left: 2%;
+    margin-right: 0%;
+    border-radius: 50px;
+    margin-top: 15px;">
+
+    <h1 id="PlacarBrasil" 
+    style="float: left;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 1%;
+    margin-right: 0%;
+    font-family: cursive;
+    font-size: 62px;">0</h1>
+
+    <h3 style="margin-top: 15px;
+    margin-bottom: 0px;
+    margin-left: 1.5%;
+    margin-right: 0%;
+    font-family: cursive;
+    color: gray;
+    float: left;
+    font-size: 36px;">x</h3>
+
+    <h1 id="PlacarAlemanha" 
+    style="float: left;
+    margin-right: 0%;
+    margin-left: 1.5%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: cursive;
+    font-size: 62px;">0</h1>
+
+    <img src="https://rlv.zcache.com.pt/etiquetas_redondas_de_bandeiras_da_alemanha-rcf42cf6e69314a29bc70d8a622b3ce6e_0ugmm_8byvr_540.jpg"
+    style="width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    margin-right: 2%;
+    margin-left: 1%;
+    margin-top: 15px;
+    float: left;">
+
+    <h1 style="margin-top: 22px;
+    margin-bottom: 0px;
+    margin-right: 0%;
+    margin-left: 0%;
+    float: left;
+    font-family: cursive;">Alemanha</h1>
+
+    </div>
+
+
+    <button style="width: 10%;
+    height: 60px;
+    float: left;
+    margin-top: 20px;
+    margin-right: 0%;
+    margin-left: 0%;
+    font-family: cursive;
+    border-radius: 30px;
+    border-style: solid;
+    background-color: white;
+    border-color: #000;
+    color: #000;"
+    onclick="BotaoAlemanha()">
+        <b>Gol da Alemanha </b>
+    </button>
+
+</div>
+
+
+<!-- BOTÃO RECOMEÇAR--------------------------------------------------------------------------->
+
+<DIV style="width: 100%;
+height: 70px;
+float: left;
+margin-bottom: 5px;">
+
+    <button style="width: 10%;
+    height: 60px;
+    margin-top: 0px;
+    margin-left: 45%;
+    font-family: cursive;
+    border-radius: 30px;
+    border-style: solid;
+    background-color: white;
+    border-color: #000;
+    color: #000;"
+    onclick="Recomecar()">
+        <b>Recomeçar Partida</b>
+    </button>
+
+
+</DIV>
+
+<!-- DIV LADO ESQUERDO --------------------------------------------------------------------------->
+
+<div style="width: 47%;
+float: left;
+font-size: 20px;
+font-family: cursive;
+text-align: right;
+margin-right: 1%;
+margin-left: 2%;">
+<span id="GolBrasil">
+</span>
+</div>
+
+<!-- LINHA CENTRAL--------------------------------------------------------------------------->
+
+<div style="width: 1px;
+height: 550px;
+float: left;
+background-color: grey;"
+id="Linha">
+
+</div>
+
+
+<!-- DIV LADO DIREITO --------------------------------------------------------------------------->
+
+<div style="width: 48%;
+float: left;
+font-size: 20px;
+margin-left: 1%;
+font-family: cursive;">
+<span id="GolAlemanha">
+</span>
+
+</div>
+
+
+</div>
+</body>
+</html>
+
+<script>
+
+    function BotaoBrasil(){
+        var Gol = Number(PlacarBrasil.innerHTML);
+
+        if(Gol==9){Margem.style.marginLeft = "8%";}
+
+        PlacarBrasil.innerHTML = Gol + 1;
+        GolBrasil.innerHTML += "É goooolll do Brasil!!!<br>";
+        GolBrasil.style.color = "Green";
+        GolAlemanha.innerHTML += "<br>";
+        Linha.innerHTML += "<br>";
+    }
+
+    function BotaoAlemanha(){
+        var Gol = Number(PlacarAlemanha.innerHTML);
+
+        PlacarAlemanha.innerHTML = Gol + 1;
+        GolAlemanha.innerHTML += "É goooolll do Alemanha!!!<br>";
+        GolAlemanha.style.backgroundColor = "darkred";
+        GolAlemanha.style.color = "yellow"
+        GolBrasil.innerHTML += "<br>";
+        Linha.innerHTML += "<br>";
+
+    }
+
+    function Recomecar(){
+        PlacarAlemanha.innerHTML = "0";
+        PlacarBrasil.innerHTML = "0";
+        GolAlemanha.innerHTML = "";
+        GolBrasil.innerHTML = "";
+        Margem.style.marginLeft = "14%";
+    }
+
+</script>

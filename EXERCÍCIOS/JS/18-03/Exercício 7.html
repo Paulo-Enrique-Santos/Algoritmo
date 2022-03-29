@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calcule o Financiamento</h1>
+    Insira o Valor do Carro a Vista: <input type="text" id="Avista"> <br>
+    Taxa de Juros: <input type="text" id="Juros"> <br>
+    Quantidade de Parcelas <input type="text" id="Parcelas"> <br>
+    <button onclick="Calcular()">
+        Calcular Prejú
+    </button>
+    <div id="Resultado"></div>
+</body>
+</html>
+
+<script>
+
+    function Calcular(){
+        var TermoPG = Number(Avista.value / Parcelas.value)
+        var Razao   = Number((Juros.value/100) + 1 )
+        var Result  = Number( TermoPG * Razao ** (Parcelas.value - 1) )
+        var Total   = (TermoPG * ((Razao ** Parcelas.value) - 1)) / (Razao - 1)
+        var TotalRS = (Total).toLocaleString("PT-BR", {style:'currency', currency:'BRL'})
+        var Vale    = Number(Avista.value*0.8).toLocaleString("PT-BR", {style: 'currency', currency:'BRL'})
+        var Carros  = (Total / Avista.value ).toFixed(2)
+
+        Resultado.innerHTML = `Seu carro vai sair por um total de <b>${TotalRS}</b>. <br> 
+        Após 1 mês, ele já vai valer só <b>${Vale}</b>. <br> 
+        Porque comprou financiado, vai pagar o correspondente a <b>${Carros}</b> carros` 
+    }
+</script>

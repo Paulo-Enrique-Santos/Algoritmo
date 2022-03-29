@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calcule a Raiz Quadrada</h1>
+    Informe um Número: <input type="text" id="Numero">
+    <button onclick="Raiz()">Exibir sua Raiz Quadrada</button>
+    <button onclick="RaizC()">Exibir sua Raiz Cúbica</button>
+    <div id="Resultado"></div>
+</body>
+</html>
+
+<script>
+    function Raiz(){
+        var Result = Number( Numero.value ** (1/2) )
+
+        Resultado.innerHTML = `A Raiz Quadrada do seu número é: ${Result}`
+    }
+    
+    function RaizC(){
+        var Result = Number( Numero.value ** (1/3) )
+
+        Resultado.innerHTML = `A Raiz Cúbica do seu número é: ${Result}`
+    }
+</script>

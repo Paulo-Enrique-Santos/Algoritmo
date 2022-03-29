@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="Esquerda()">Mover p/ Esquerda</button>
+    <button onclick="Direita()">Mover p/ Direita</button>
+    Quantos Pixels<input type="text" id="Input"><br>
+    <img src="https://www.purarteadesivos.com.br/wp-content/uploads/2017/05/Bart-simpson-skate.png"
+    style="width: 300px;"
+    id="Imagem">
+
+</body>
+</html>
+
+<script>
+    var Margem = 0;
+
+    function Direita(){
+        var Mover = Number(Input.value);
+
+        Margem += Mover;
+
+        Imagem.style.marginLeft = Margem + "px";
+
+    }
+
+    function Esquerda(){
+        
+        var Mover = Number(Input.value);
+
+        Margem -= Mover;
+
+        Imagem.style.marginLeft = Margem + "px";
+
+
+    }
+
+</script>

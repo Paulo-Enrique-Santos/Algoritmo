@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="color: blue;" id="Resultado">Total Guardado no cofrinho: R$0.00 <br>
+        Depósitos Efetuados: 0</div>
+
+    <button onclick="Cinquenta()">Depositar R$0,50</button>
+    <button onclick="Dois()">Depositar R$2,00</button>
+    <span style="color: white;" id="Guardado">0</span>
+
+    <span style="color: white;" id="Deposito">0</span>
+</body>
+
+</html>
+<script>
+    function Cinquenta() {
+        var Guard = Number(Guardado.innerHTML);
+        var DEP = Number(Deposito.innerHTML);
+
+        var conta = Guard + 0.5;
+        var conta1 = DEP + 1;
+        Guardado.innerHTML = conta;
+
+        Deposito.innerHTML = conta1;
+
+
+        Resultado.innerHTML = `Total Guardado no cofrinho: ${conta.toLocaleString("PT-BR", { style: 'currency', currency: "BRL" })} <br>
+                              Depósitos Efetuados: ${conta1}`
+
+
+    }
+
+    function Dois() {
+        var Guard = Number(Guardado.innerHTML);
+        var DEP = Number(Deposito.innerHTML);
+
+        var conta = Guard + 2;
+        var conta1 = DEP + 1;
+        Guardado.innerHTML = conta;
+
+        Deposito.innerHTML = conta1;
+
+
+        Resultado.innerHTML = `Total Guardado no cofrinho: ${conta.toLocaleString("PT-BR", { style: 'currency', currency: "BRL" })} <br>
+                              Depósitos Efetuados: ${conta1}`
+
+    }
+</script>

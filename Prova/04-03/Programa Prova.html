@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="PTBR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feira do Seu Jorge</title>
+</head>
+<body>
+    
+    Nome: <input type="text" id="Nome"><br>
+    Quantidade comprada: <input type="text" id="QTD"><br>
+
+    <button onclick="Banana()">Banana</button>
+    <button onclick="Maca()">Maçã</button>
+    <button onclick="Uva()">Uva</button>
+    <button onclick="Pera()">Pera</button><br>
+
+    <div id="Resultado">
+
+    </div>
+
+</body>
+</html>
+
+<script>
+    function Banana(){
+        var TOTAL = Number(0.5 * QTD.value);
+        var DESC  = Number(TOTAL * 0.9);
+        Resultado.innerHTML = "Olá " + Nome.value + " sua compra deu um total de R$ " + TOTAL + "<br> Com desconto sua compra sai por R$ " + DESC ;
+        Resultado.style.color="yellow";
+        Resultado.style.backgroundColor="Black";
+    }   
+
+    function Maca(){
+        var TOTAL = Number(0.75 * QTD.value);
+        var DESC  = Number(TOTAL * 0.8);
+        Resultado.innerHTML = "Olá " + Nome.value + " sua compra deu um total de R$ " + TOTAL + "<br> Com desconto sua compra sai por R$ " + DESC ;
+        Resultado.style.color="Red";
+        Resultado.style.backgroundColor="white";
+        
+    }
+
+    function Uva(){
+        var TOTAL = Number(0.1 * QTD.value);
+        var DESC  = Number(TOTAL * 0.7);
+        Resultado.innerHTML = "Olá " + Nome.value + " sua compra deu um total de R$ " + TOTAL + "<br> Com desconto sua compra sai por R$ " + DESC ;
+        Resultado.style.color="White";
+        Resultado.style.backgroundColor="purple";
+        
+    }
+
+    function Pera(){
+        var TOTAL = Number(1 * QTD.value);
+        var DESC  = Number(TOTAL * 0.5);
+        Resultado.innerHTML = "Olá " + Nome.value + " sua compra deu um total de R$ " + TOTAL + "<br> Com desconto sua compra sai por R$ " + DESC ;
+        Resultado.style.color="Green";
+        Resultado.style.backgroundColor="White";
+        
+    }
+
+</script>

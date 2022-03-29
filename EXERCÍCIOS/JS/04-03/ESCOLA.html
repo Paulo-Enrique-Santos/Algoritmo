@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="PTBR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequência Escolar</title>
+</head>
+<body background="https://a-static.mlcdn.com.br/1500x1500/papel-de-parede-infantil-escolar-300-x-59cm-x4adesivos/x4adesivos-tray/5808/a4ae97ed28c922ab0de91ad3d5a31d94.jpg">
+<div style="background-color: #d8dfe6;
+width: 30%;
+margin-left: auto;
+margin-right: auto;
+margin-top: 150px;
+position: relative;
+border-style: solid;
+border-radius: 30px;
+border-color: #0a608a;">
+
+    <h2 style="text-align: center;
+    font-family: cursive;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    color: #0a608a;">Calcule a Frequência do Aluno </h2>
+
+    <h4 style="text-align: center;
+    font-family: cursive;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #0a608a;
+    ">Nome do Aluno</h4>
+
+    <input type="text"
+    style="width: 40%;
+    height: 30px;
+    margin-left: 29%;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    border-style: solid;
+    text-align: center;
+    border-color: #215b77;
+    background-color: #e5f4ff;
+    outline-color: #0a608a;"
+    placeholder="Ex: João"
+    id="Nome">
+
+
+    <h4 style="text-align: center;
+    font-family: cursive;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #0a608a;">Quantidade de Aulas do Curso</h4>
+
+    <input type="text"
+    style="width: 40%;
+    height: 30px;
+    margin-bottom: 10px;
+    margin-left: 29%;
+    border-radius: 30px;
+    border-style: solid;
+    text-align: center;
+    border-color: #215b77;
+    background-color: #e5f4ff;
+    outline-color: #0a608a;"
+    placeholder="Ex: 40"
+    id="Totais">
+
+    
+    <h4 style="text-align: center;
+    font-family: cursive;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #0a608a;">Quantas Faltas o Aluno Teve</h4>
+
+    <input type="text"
+    style="width: 40%;
+    height: 30px;
+    margin-left: 29%;
+    border-radius: 30px;
+    border-style: solid;
+    text-align: center;
+    border-color: #215b77;
+    background-color: #e5f4ff;
+    outline-color: #0a608a;"
+    placeholder="Ex: 12"
+    id="Faltas"><br>
+
+    <button style="width: 60%;
+    height: 40px;
+    border-style: solid;
+    border-radius: 30px;
+    margin-left: 20%;
+    font-family: cursive;
+    margin-top: 20px;
+    margin-bottom: 20px ;
+    background-color: #111d27;
+    border-color: black;
+    color: #0a608a;"
+    onclick="Calcular()">
+        <b>Calcular Frequência</b>
+    </button>
+
+
+    <div id="Calculo">
+
+    </div>
+
+</div>
+</body>
+</html>
+
+
+<script>
+    function Calcular(){
+        var Frequência        = Number(((Totais.value-Faltas.value)/Totais.value)*100).toFixed(2);
+        Calculo.innerHTML = '<span style="margin-left: 110px ;font-family: cursive; margin-top: 0px;margin-bottom: 10px;color: blue;">Olá, ' + Nome.value + '! Sua Frequência foi de ' +
+        '<b style="color:green">' + Frequência + '% </b> </span> <div style ="background-color: darkred; margin-bottom:20px; width:' + Frequência +'%; height: 20px;"> </div>'
+
+    }
+</script>

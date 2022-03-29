@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="PTBR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passagem</title>
+</head>
+<body background="https://media.istockphoto.com/vectors/yellow-cartoon-school-buses-isolated-on-dark-blue-background-side-vector-id1363676231?b=1&k=20&m=1363676231&s=170667a&w=0&h=RLfZSPqJ411NVp5i6GTY4zVmqCHgWu-exp_ZwlwkpoE=">
+   
+    <div style="background-color: #87cefa;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    position: relative;
+    border-style: solid;
+    border-radius: 30px;
+    border-color: #ff007f;">
+
+        <h2 style="text-align: center;
+        font-family: cursive;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        color: #ff007f;">Calcule Passagem Mensal</h2>
+
+        <h4 style="text-align: center;
+        font-family: cursive;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: #ff007f;
+        ">Valor de passagem do ônibus</h4>
+
+        <input type="text"
+        style="width: 40%;
+        height: 30px;
+        margin-left: 29%;
+        margin-bottom: 10px;
+        border-radius: 30px;
+        border-style: solid;
+        text-align: center;
+        border-color: #215b77;
+        background-color: #e5f4ff;
+        outline-color: #ff007f;"
+        placeholder="Ex: 4.80"
+        id="Valor">
+
+
+        <h4 style="text-align: center;
+        font-family: cursive;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: #ff007f;">Quantas viagens faz por mês</h4>
+
+        <input type="text"
+        style="width: 40%;
+        height: 30px;
+        margin-bottom: 10px;
+        margin-left: 29%;
+        border-radius: 30px;
+        border-style: solid;
+        text-align: center;
+        border-color: #215b77;
+        background-color: #e5f4ff;
+        outline-color: #ff007f;"
+        placeholder="Ex: 40"
+        id="Qtd">
+
+        
+        <h4 style="text-align: center;
+        font-family: cursive;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: #ff007f;">Distância do trabalho para casa</h4>
+
+        <input type="text"
+        style="width: 40%;
+        height: 30px;
+        margin-left: 29%;
+        border-radius: 30px;
+        border-style: solid;
+        text-align: center;
+        border-color: #215b77;
+        background-color: #e5f4ff;
+        outline-color: #ff007f;"
+        placeholder="Ex: 12"
+        id="Dist"><br>
+
+        <button style="width: 60%;
+        height: 40px;
+        border-style: solid;
+        border-radius: 30px;
+        margin-left: 20%;
+        font-family: cursive;
+        margin-top: 20px;
+        margin-bottom: 20px ;
+        background-color: #142129;
+        border-color: black;
+        color: #ff007f;"
+        onclick="Calcular()">
+            <b>Calcular VT</b>
+        </button>
+
+
+        <div id="Calculo">
+
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+    function Calcular(){
+        var Onibus      = Number((Qtd.value*0.9)*Valor.value);
+        var Uber        = Number((Qtd.value*0.1)*(Dist.value*0.75));
+        var Soma        = Number(Onibus+Uber).toFixed(2);
+        Calculo.innerHTML = '<h4 style="text-align: center;font-family: cursive;margin-top: 0px;margin-bottom: 10px;color: #ff007f;">Você vai gastar R$' + Soma + ' por mês com transporte.</h4>';
+
+    }
+</script>

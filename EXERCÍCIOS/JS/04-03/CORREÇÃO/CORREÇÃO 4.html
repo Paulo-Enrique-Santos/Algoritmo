@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="PTBR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+</head>
+<body>
+    
+    Nome: <input type="text" id="input_nome"> <br>
+    Quantidade de aulas do curso: <input type="text" id="input_qtd_aulas"> <br>
+    Sua quantidade de faltas: <input type="text" id="input_qtd_faltas"> <br>
+
+    <button onclick="Resultado()">Calcular Frequência</button> <br>
+
+    <div id="div_resultado"></div>
+ 
+</body>
+</html>
+
+<script>
+    
+    function Resultado(){
+        var nome        = input_nome.value;
+        var qtd_aulas   = Number(input_qtd_aulas.value);
+        var qtd_faltas  = Number(input_qtd_faltas.value);
+        var frequencia  = ((qtd_aulas-qtd_faltas)/qtd_aulas)*100;
+
+
+        if(frequencia>=50){
+        div_resultado.innerHTML =`
+        <span style="color: blue;">Olá, ${nome}! Sua frequência foi de <b style="color: green;">${frequencia}%</b> </span>
+        <div style="height: 20px; width: ${frequencia}%; background-color: green;"></div>
+        `
+        }else{
+        div_resultado.innerHTML =`
+        <span style="color: blue;">Olá, ${nome}! Sua frequência foi de <b style="color: red;">${frequencia}%</b> </span>
+        <div style="height: 20px; width: ${frequencia}%; background-color: red;"></div>
+        `  
+        }
+    }
+
+</script>

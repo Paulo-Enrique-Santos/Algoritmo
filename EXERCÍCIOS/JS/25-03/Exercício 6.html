@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6</title>
+</head>
+<body>
+    Informe a Temperatura do ambiente: <br>
+    <input type="text" id="Temperatura"> <br>
+    <button onclick="Calcular()">
+        Virificar Clima
+    </button>
+
+    <div id="Resultado"></div>
+</body>
+</html>
+
+<script>
+    function Calcular(){
+        var VarTemperatura = Number(Temperatura.value)
+
+        if(VarTemperatura < 10){
+            Resultado.innerHTML = `<img src="https://www.iped.com.br/_upload/content/2015/03/03/identificar-alimentos-bom-estado.jpg">`
+        }else{
+            Resultado.innerHTML = `<img src="https://st2.depositphotos.com/15719780/45686/i/600/depositphotos_456860054-stock-photo-spoiled-rotten-foods-with-mold.jpg">`
+        }
+    }
+</script>

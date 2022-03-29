@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="PTBR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faça Sua Escolha</title>
+</head>
+<body style="background-color: black;">
+
+    <div style="width: 250px;
+    height: 90px;
+    background-color: black;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+    border-radius: 25px;
+    border-color: #32cd32;
+    border-style: solid;">
+
+        <div style="width: 240px;
+        height: 30px;
+        margin-left: 5px;
+        margin-top: 5px;">
+        <h2 style="margin-top: 0px;
+        margin-bottom: 0px;
+        text-align: center;
+        font-family: cursive;
+        color: #32cd32;">Escolha um Botão</h2>
+        </div>
+
+        <div style="margin-top: 5px;
+        width: 240px;
+        height: 45px;
+        margin-left: 5px;">
+
+        <button style="width: 70px;
+        height: 25px;
+        margin-left: 5px;
+        margin-top: 10px;
+        border-radius: 30px;
+        background-color: black;
+        border-style: solid;
+        border-color: #32cd32;"
+        onclick="Carnes()">
+            <b style="font-family: cursive; color: #32cd32;">Carnes</b>
+        </button>
+
+        <button style="width: 70px;
+        height: 25px;
+        margin-left: 5px;
+        margin-top: 10px;
+        border-radius: 30px; 
+        background-color: black;
+        border-style: solid;
+        border-color: #32cd32;"
+        onclick="Legumes()">
+            <b style="font-family: cursive; color: #32cd32;">Legumes</b>
+        </button>
+
+        <button style="width: 70px;
+        height: 25px;
+        margin-left: 5px;
+        margin-top: 10px;
+        border-radius: 30px;
+        background-color: black;
+        border-style: solid;
+        border-color: #32cd32;"
+        onclick="Frutas()">
+            <b style="font-family: cursive; color: #32cd32;">Frutas</b>
+        </button>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+    function Carnes(){
+        alert("Churrasquinho, huuum... Que Delícia!");
+        document.title="Último clique: Botão de Carnes";
+    }
+
+    function Legumes(){
+        alert("Depende do dia...");
+        document.title="Último clique: Botão de Legumes";
+    }
+
+    function Frutas(){
+        alert("Saladinha de Frutas com Leite Condensado, Absurdo de bom !!!");
+        document.title="Último clique: Botão de Frutas";
+    }
+
+</script>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calcule a Area</h1>
+    Informe o Raio de Circunferência: <input type="text" id="RaioCir">
+    <button onclick="Calcular()">Calcular Área</button>
+
+    <div id="Resultado"></div>
+</body>
+</html>
+
+<script>
+    function Calcular(){
+        var Area = Number( 3.14 * (RaioCir.value * RaioCir.value) ).toFixed(2)
+
+        Resultado.innerHTML = ` Area do seu círculo ${Area}`
+    }
+</script>

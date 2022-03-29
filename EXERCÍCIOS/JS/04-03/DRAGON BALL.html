@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="PTBR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Ball</title>
+</head>
+<body background="https://img.elo7.com.br/product/original/302D361/tecido-dragon-ball-z-fundo-laranja-poliester-140-cm-x-50-cm-banners.jpg">
+    <div style="background-color: #191970;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    position: relative;
+    border-style: solid;
+    border-radius: 30px;
+    border-color: #ff8c00;">
+    
+        <h2 style="text-align: center;
+        font-family: cursive;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: #ff8c00;">Dragon Ball</h2>
+
+        <h3 style="text-align: center;
+        font-family: cursive;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        color: #ff8c00;">Calcule o Poder do Sayajin</h3>
+
+        <h4 style="text-align: center;
+        font-family: cursive;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: #ff8c00;
+        ">KI Base</h4>
+    
+        <input type="text"
+        style="width: 40%;
+        height: 30px;
+        margin-left: 29%;
+        margin-bottom: 10px;
+        border-radius: 30px;
+        border-style: solid;
+        text-align: center;
+        border-color: #ff8c00;
+        background-color: #191970;
+        outline-color: #0a608a;"
+        placeholder="Ex: 1230"
+        id="KI">
+    
+    
+        <h4 style="text-align: center;
+        font-family: cursive;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: #ff8c00;">Transformar em...</h4>
+
+        <button style="width: 20%;
+        height: 40px;
+        border-style: solid;
+        border-radius: 30px;
+        margin-left: 20%;
+        font-family: cursive;
+        margin-top: 20px;
+        margin-bottom: 20px ;
+        background-color: #191970;
+        border-color: #ff8c00;
+        color: #ff8c00;"
+        onclick="SSJ()">
+            <b>SSJ</b>
+        </button>
+
+        <button style="width: 20%;
+        height: 40px;
+        border-style: solid;
+        border-radius: 30px;
+        margin-left: 0%;
+        font-family: cursive;
+        margin-top: 20px;
+        margin-bottom: 20px ;
+        background-color: #191970;
+        border-color: #ff8c00;
+        color: #ff8c00;"
+        onclick="SSJD()">
+            <b>SSJ2</b>
+        </button>
+
+        <button style="width: 20%;
+        height: 40px;
+        border-style: solid;
+        border-radius: 30px;
+        margin-left: 0%;
+        font-family: cursive;
+        margin-top: 20px;
+        margin-bottom: 20px ;
+        background-color: #191970;
+        border-color: #ff8c00;
+        color: #ff8c00;"
+        onclick="SSJT()">
+            <b>SSJ3</b>
+        </button>
+        
+        <div id="Calculo">
+    
+        </div>
+</div>
+    
+</body>
+</html>
+
+<script>
+    function SSJ(){
+        var KIATUAL = Number(KI.value*50);
+        Calculo.innerHTML = '<h5 style="text-align: center; font-family: cursive; margin-top: 0px; margin-bottom:'+ 
+        '10px; color: #ff8c00;">Após se transformar em SSJ, o KI desse Sayajin passa a ser de ' + KIATUAL + '</h5>'
+    }
+
+    function SSJD(){
+        var KIATUAL = Number(KI.value*100);
+        Calculo.innerHTML = '<h5 style="text-align: center; font-family: cursive; margin-top: 0px; margin-bottom:'+ 
+        '10px; color: #ff8c00;">Após se transformar em SSJ2, o KI desse Sayajin passa a ser de ' + KIATUAL + '</h5>'
+    }
+
+    function SSJT(){
+        var KIATUAL = Number(KI.value*200);
+        Calculo.innerHTML = '<h5 style="text-align: center; font-family: cursive; margin-top: 0px; margin-bottom:'+ 
+        '10px; color: #ff8c00;">Após se transformar em SSJ3, o KI desse Sayajin passa a ser de ' + KIATUAL + '</h5>'
+    }
+
+</script>

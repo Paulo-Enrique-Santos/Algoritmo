@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="PTBR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria Paulo's</title>
+</head>
+<body background="https://img.freepik.com/vetores-gratis/desenho-de-pizza-em-desenhos-animados-kawaii-desenhado-a-mao_261969-1360.jpg">
+    
+    <div style="background-color: #ffffff;
+    width: 35%;
+    float: left;
+    margin-left: 30%;
+    margin-top: 100px;
+    border-style: solid;
+    border-color: #EA1D2C;
+    border-radius: 30px;">
+
+        <img src="https://st2.depositphotos.com/1000419/5237/v/600/depositphotos_52373739-stock-illustration-pieces-of-pizza-sketch-for.jpg" 
+        style="width: 60px; height: 60px;
+        float: left;
+        margin-left: 15px;
+        margin-top: 10px;
+        border-radius: 50px;">
+
+        <img src="https://st2.depositphotos.com/1000419/5237/v/600/depositphotos_52373739-stock-illustration-pieces-of-pizza-sketch-for.jpg" 
+        style="width: 60px; height: 60px;
+        float: right;
+        margin-right: 15px;
+        margin-top: 10px;
+        border-radius: 50px;">
+
+        <h1 style="text-align: center;
+        margin-top: 16px;
+        margin-bottom: 0px;
+        font-family: cursive;
+        color: #EA1D2C;">Faça seu Pedido</h1><br>
+
+
+        <h3 style="text-align: center;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-family: cursive;
+        color: #EA1D2C;">Sabor da Pizza</h3>
+
+        <input type="text"
+        style="width: 30%;
+        height: 25px;
+        margin-left: 34%;
+        border-radius: 30px;
+        border-style: solid;
+        text-align: center;
+        border-color: #EA1D2C;
+        background-color: #ffffff;"
+        placeholder= "Ex: Calabresa"
+        id="Sabor"><br>
+
+        <h3 style="text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-family: cursive;
+        color: #EA1D2C;">Preço da Pizza</h3>
+
+        <input type="text"
+        style="width: 30%;
+        height: 25px;
+        margin-left: 34%;
+        border-radius: 30px;
+        border-style: solid;
+        text-align: center;
+        border-color: #EA1D2C;
+        background-color: #ffffff;"
+        placeholder="Ex: 27.50"
+        id="Preco"><br>
+
+        <h3 style="text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-family: cursive;
+        color: #EA1D2C;">Quantidade de Amigos</h3>
+
+        <input type="text"
+        style="width: 30%;
+        height: 25px;
+        margin-left: 34%;
+        border-radius: 30px;
+        border-style: solid;
+        text-align: center;
+        border-color: #EA1D2C;
+        background-color: #ffffff;"
+        placeholder="Ex: 3"
+        id="Amigos"><br>
+
+        <button style="width: 45%;
+        height: 35px;
+        margin-left: 27.5%;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        border-radius: 30px;
+        border-style: solid;
+        font-family: cursive;
+        border-color: #EA1D2C;
+        background-color: #ffffff;
+        color: #EA1D2C;"
+        onclick="Valor()">
+            <B>Ver Valor Por Amigo</B>
+        </button>
+
+        <div id="Div">
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+<script>
+    function Valor(){
+        var PP      = Number(Preco.value*1.1);
+        var PI      = Number(PP/Amigos.value).toFixed(2);
+
+        Div.innerHTML = '<h2 style="text-align: center;margin-top: 5px;margin-bottom: 5px;font-family: cursive;color: #EA1D2C;">Pedido Feito</h2><br>' + 
+        '<h4 style="text-align: center;margin-top: 5px;margin-bottom: 5px;font-family: cursive;color: #EA1D2C;">Cada amigo vai colaborar com R$'+ PI + 
+        ' para pizza de ' + Sabor.value + '<br>(Gorjeta inclusa no valor de R$' + Number(Preco.value*0.1) + ')</h4><br>'
+
+
+    }
+
+</script>

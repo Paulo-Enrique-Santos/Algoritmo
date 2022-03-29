@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="Imagem" src="https://www.sptech.school/assets/images/logos/sptech_logo.png" style="width: 400px; height: 250px;">
+    <br>
+
+    <button onclick="Aumentar()">Aumentar a Largura</button>
+    <button onclick="Reduzir()">Reduzir a Largura</button>
+    <span id="xpto" style="color: white;">400</span>
+</body>
+</html>
+
+<script>
+
+    function Aumentar(){
+        var TamanhoOriginal = Number(xpto.innerHTML);
+        TamanhoOriginal += 10;
+        xpto.innerHTML= TamanhoOriginal;
+        Imagem.style.width = TamanhoOriginal + "px";
+    }
+
+    function Reduzir(){
+        var TamanhoOriginal = Number(xpto.innerHTML);
+        TamanhoOriginal -= 10;
+        xpto.innerHTML= TamanhoOriginal;
+        Imagem.style.width = TamanhoOriginal + "px";
+    }
+</script>

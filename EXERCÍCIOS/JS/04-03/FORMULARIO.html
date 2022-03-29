@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="PTBR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <div style="border-radius: 30px;
+    border-color: dodgerblue;
+    border-style: solid;
+    width: 350px;
+    height: 300px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 13%;">
+
+        <!-- TITULO-->
+        <div style="width: 340px;
+        height: 40px;
+        margin-left: 5px;
+        margin-top: 5px;
+        float: left;">
+        <h1 style="margin-top: 0px;
+        margin-bottom: 0px;
+        text-align: center;
+        color: dodgerblue;
+        font-family: cursive;">Formulário</h1>
+        </div>
+
+        <!-- TITULOS FORM-->
+        <div style="height: 200px;
+        width: 170px;
+        float: left;
+        margin-left: 5px;
+        margin-top: 5px;">
+        <h3 style="margin-top: 25px;
+        margin-bottom: 15px;
+        text-align: center;
+        color: dodgerblue;
+        font-family: cursive;">Nome:</h3>
+        
+        <h3 style="margin-top: 0px;
+        margin-bottom: 15px;
+        text-align: center;
+        color: dodgerblue;
+        font-family:cursive;">Idade:</h3>
+        
+        <h3 style="margin-top: 0px;
+        margin-bottom: 15px;
+        text-align: center;
+        color: dodgerblue;
+        font-family:cursive;">Cidade:</h3>
+        
+        <h3 style="margin-top: 0px;
+        margin-bottom: 0px;
+        text-align: center;
+        color: dodgerblue;
+        font-family:cursive">Cor Favorita:</h3>
+        </div>
+
+        <!-- TITULOS INPUT-->
+        <div style="height: 200px;
+        width: 170px;
+        margin-top: 5px;
+        float: left;">
+
+        <input type="text" 
+        style="width: 153px;
+        margin-left: 5px;
+        margin-top: 28px;
+        margin-bottom: 15px;
+        border-radius: 30px;
+        border-color: dodgerblue;
+        border-style: solid;
+        font-family: cursive;
+        text-align: center;
+        outline-color: darkblue;"
+        id="Nome"
+        placeholder="Ex: João">
+
+
+        <input type="text" 
+        style="width: 153px;
+        margin-left: 5px;
+        margin-top: 0px;
+        margin-bottom: 15px;
+        border-radius: 30px;
+        border-color: dodgerblue;
+        border-style: solid;
+        font-family: cursive;
+        text-align: center;
+        outline-color: darkblue;"
+        id="Idade"
+        placeholder="Ex: 18">
+        
+        <input type="text" 
+        style="width: 153px;
+        margin-left: 5px;
+        margin-top: 0px;
+        margin-bottom: 15px;
+        border-radius: 30px;
+        border-color: dodgerblue;
+        border-style: solid;
+        font-family: cursive;
+        text-align: center;
+        outline-color: darkblue;"
+        id="Cidade"
+        placeholder="Ex: São Paulo">
+        
+        <input type="text" 
+        style="width: 153px;
+        margin-left: 5px;
+        margin-top: 0px;
+        margin-bottom: 19px;
+        border-radius: 30px;
+        border-color: dodgerblue;
+        border-style: solid;
+        font-family: cursive;
+        text-align: center;
+        outline-color: darkblue;"
+        id="Cor"
+        placeholder="Ex: Preto">
+        
+        </div>
+
+        <!-- BOTÂO-->
+        <div style="width: 340px;
+        height: 40px;
+        float: left;
+        margin-top: 5px;
+        margin-left: 5px;">
+        
+        <button style="margin-top: 7px;
+        height: 26px;
+        width: 120px;
+        margin-left: 110px;
+        background-color: dodgerblue;
+        color: white;
+        border-radius: 30px;
+        border-style: solid;
+        border-color: dodgerblue;
+        font-family: cursive;
+        outline-color: darkblue;"
+        onclick="AnalisarDados()"><b>Analisar Dados</b></button>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function AnalisarDados(){
+        alert("Olá, " + Nome.value + ", da cidade " + Cidade.value + ". Sua idade atual é " + Idade.value + ", acertei ?");
+        alert("Vejo que sua cor favorita é " + Cor.value);
+        Nome.value="";
+        Cor.value="";
+        Idade.value="";
+        Cidade.value="";
+    }
+</script>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="PTBR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculos</title>
+</head>
+<body>
+<div style="width: 330px;
+            height: 85px;
+            background-color: yellow;">
+    <b>Primeiro Número:</b> <input id="PrimeiroNumero"
+                             style="margin-bottom: 5px;
+                             height: 15px;
+                             margin-top: 5px;">
+    <br>
+    <b>Segundo Número:</b>  <input id="SegundoNumero"
+                             style="margin-bottom: 5px;
+                             height: 15px;">
+    <br>
+    <button onclick="Somar()"
+    style="width: 75px;
+    height: 20px;">Somar</button>
+    
+    <button onclick="Subtrair()"
+    style="width: 75px;
+    height: 20px;">Subtrair</button>
+    
+    <button onclick="Multiplicar()"
+    style="width: 75px;
+    height: 20px;">Multiplicar</button>
+    
+    <button onclick="Dividir()"
+    style="width: 75px;
+    height: 20px;">Dividir</button>
+</div>
+</body>
+</html>
+
+<script>
+
+    function Somar(){
+            var N1      = Number(PrimeiroNumero.value);
+            var N2      = Number(SegundoNumero.value);
+            var Soma    = N1 + N2;
+            alert("Soma: " + Soma);
+    };
+
+    function Subtrair(){
+            var N1              = Number(PrimeiroNumero.value);
+            var N2              = Number(SegundoNumero.value);
+            var Subtração       = N1 - N2;
+            alert("Subtração: " + Subtração);
+    };
+
+    function Multiplicar(){
+            var N1              = Number(PrimeiroNumero.value);
+            var N2              = Number(SegundoNumero.value);
+            var Multiplicação   = N1 * N2;
+            alert("Multiplicação: " + Multiplicação);
+    };
+
+    function Dividir(){
+            var N1              = Number(PrimeiroNumero.value);
+            var N2              = Number(SegundoNumero.value);
+            var Divisão         = N1/N2;
+            alert("Divisão: " + Divisão);
+    };
+
+</script>

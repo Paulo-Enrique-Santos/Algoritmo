@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+</head>
+<body>
+    Informe Quanto tempo deixou arroz Cozinhando: <br>
+    <input type="text" id="Tempo"><br>
+    <button onclick="Calcular()">
+        Provar Arroz
+    </button>
+
+    <div id="Resultado"></div>
+</body>
+</html>
+
+<script>
+
+    function Calcular(){
+        var VarTempo = Number(Tempo.value)
+
+        if(VarTempo == 5){
+            Resultado.innerHTML =  `Parabéns! Arroz perfeito! <br>
+                                    <img src="https://www.elhombre.com.br/wp-content/uploads/2019/09/Arroz-como-fazer.jpg">`
+        }else{
+            Resultado.innerHTML =  `Arroz cru ou cozido demais!<br>
+                                    <img src="https://media.jcorreiodopovo.com.br/2014/11/1417113775.jpg">`
+        }
+    }
+</script>

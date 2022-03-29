@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+</head>
+<body>
+    Informe a Frequência do Aluno: <br>
+    <input type="text" id="Frequencia"><br>
+
+    <button onclick="Calcular()">
+        Analisar Frequencia
+    </button>
+
+    <div id="Resultado"></div>
+</body>
+</html>
+
+<script>
+    function Calcular(){
+        var VarFrenquencia = Number(Frequencia.value)
+
+        if(VarFrenquencia >= 50){
+            Resultado.innerHTML = `<img src="https://cdn.w600.comps.canstockphoto.com.br/estudante-cliparte-vetor_csp7417900.jpg">`
+        }else{
+            Resultado.innerHTML = `<img src="https://cdn.w600.comps.canstockphoto.com.br/turista-desenho_csp21014496.jpg">`
+        }
+    }
+</script>

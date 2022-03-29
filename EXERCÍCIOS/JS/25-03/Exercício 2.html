@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    Informe seu saldo: <br>
+    <input type="text" id="Saldo"> <br>
+
+    Informe o valor do saque: <br>
+    <input type="text" id="Saque"><br>
+
+    <button onclick="Calcular()">
+        Analisar Conta 
+    </button>
+
+    <div id="Resultado"></div>
+</body>
+</html>
+
+<script>
+
+
+    function Calcular(){
+        var VarSaldo = Number(Saldo.value)
+        var VarSaque = Number(Saque.value)
+        var Conta    = VarSaldo - VarSaque
+
+        if(Conta >= 0){
+        Resultado.innerHTML = `<i style="color: blue;">o saldo atual da conta corrente é ${Conta.toLocaleString('PT-BR', {style: 'currency' , currency:'brl'})}</i>`
+        }else{
+        Resultado.innerHTML = `<b style="color: red;">o saldo atual da conta corrente é ${Conta.toLocaleString('PT-BR', {style: 'currency' , currency:'brl'})}</b>`
+        }
+    }
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual o valor da pizza: <br>
+    <input type="text" id="Valor"> <br>
+    Quantos Amigos tem ai hoje ? <br>
+    <input type="text" id="Amigos"> <br>
+
+    <button onclick="Calcular()">
+        Rola Pizza ?
+    </button>
+</body>
+</html>
+
+<script>
+    function Calcular(){
+        var Divisao = Number(Valor.value) / Number(Amigos.value)
+
+        if(Divisao <= 20){
+        alert(`Cada amigo vai pagar ${Divisao.toLocaleString("PT-BR", { style: 'currency' , currency: 'BRL'})} pela pizza`)
+        }
+
+        if(Divisao > 20){
+        alert(`Cada amigo vai pagar ${Divisao.toLocaleString("PT-BR", { style: 'currency' , currency: 'BRL'})} pela pizza, Deu Ruim! Pizza Muito Cara!`)
+        }
+    }
+</script>

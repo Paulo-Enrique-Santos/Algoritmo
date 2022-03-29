@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="PTBR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixas</title>
+</head>
+<body>
+
+    <div id="DivFrase" >
+
+    </div>
+<div 
+>
+    <button onclick="Carnes()">
+        Carnes
+    </button>
+
+    <button onclick="Legumes()">
+        Legumes
+    </button>
+
+    <button onclick="Frutas()">
+        Frutas
+    </button>
+</div>        
+</body>
+</html>
+
+<script>
+
+    function Carnes(){
+        DivFrase.innerHTML += '<span style= "color: red;background-color: black;">Eu Gosto de Carne !</span><br>';
+        //DivFrase.style.backgroundColor = "red";
+        //DivFrase.style.color = "white";
+    }
+
+    function Legumes(){
+        DivFrase.innerHTML += '<span style= "color: red; background-color: green;">Eu Gosto de Carne !</span><br>';
+        //DivFrase.style.backgroundColor = "black";
+        //DivFrase.style.color = "yellow";
+    }
+
+    function Frutas(){
+        DivFrase.innerHTML +='<span style= "color: red; background-color: yellow;">Eu Gosto de Carne !</span><br>';
+        //DivFrase.style.backgroundColor = "green";
+        //DivFrase.style.color = "white";        
+    }
+
+</script>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div>
+        <button onclick="Iniciar()">
+            Iniciar Jogo
+        </button>
+    </div>
+    <div id="Resultado"></div>
+</body>
+</html>
+
+<script>
+
+    var Vida1 = 100
+    var Vida2 = 100
+    var Golpe1 = 0
+    var Golpe2 = 0
+
+    function Iniciar(){
+        Golpe1 = 0;
+        Golpe2 = 0;
+        Vida1  = 100;
+        Vida2  = 100;
+        Resultado.innerHTML = `<img src="https://upload.wikimedia.org/wikipedia/pt/a/ab/Scorpion.png" width="200px" onclick="Click1()">
+
+                               <div id="Barra1" style="width: 100%; height: 30px; background-color : red;"></div>
+
+                               <div id="Texto1"> Golpes sofridos pelo lutador 1: 0</div>
+
+                               <img src="https://upload.wikimedia.org/wikipedia/pt/8/81/Sub-Zero.png" width="200px" onclick="Click2()">
+
+                               <div id="Barra2" style="width: 100%; height: 30px; background-color: red;"></div>
+
+                               <div id="Texto2">Golpes sofridos pelo lutador 2: 0</div>`
+    }
+
+    function Click1(){
+        Vida1 -= 5
+        Golpe1++
+        Barra1.style.width = Vida1 + "%"
+        Texto1.innerHTML = ` Golpes sofridos pelo lutador 1: ${Golpe1}`
+
+    }
+
+    function Click2(){
+        Vida2 -= 5
+        Golpe2++
+        Barra2.style.width = Vida2 + "%"
+        Texto2.innerHTML = ` Golpes sofridos pelo lutador 2: ${Golpe2}`
+
+    }
+
+</script>

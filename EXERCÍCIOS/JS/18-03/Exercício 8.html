@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="Oito()">
+        8 Passagens
+    </button>
+
+    <button onclick="Vinte()">
+        20 Passagens
+    </button>
+    
+    <button onclick="Cinquenta()">
+        50 Passagens
+    </button>
+
+    <div id="Resultado"></div>
+</body>
+</html>
+
+<script>
+
+    function Oito(){
+        var Porc        = ( (1-(32.45/35.2)) * 100 ).toFixed(2)
+        var Ganhou      = ( (35.2-32.45)/4.4 ).toFixed(1)
+
+        Resultado.innerHTML = `Ao comprar <b>8</b> passagens, você pagou <b>${Porc}%</b> a menos.
+                               É como se tivesse ganhado <b>${Ganhou}</b> passagens de bônus`
+
+    }
+
+    function Vinte(){
+        var Porc        = ( (1-(78.65/88)) * 100 ).toFixed(2)
+        var Ganhou      = ( (88-78.65)/4.4 ).toFixed(1)
+
+        Resultado.innerHTML = `Ao comprar <b>20</b> passagens, você pagou <b>${Porc}%</b> a menos.
+                               É como se tivesse ganhado <b>${Ganhou}</b> passagens de bônus`
+
+    }
+
+    function Cinquenta(){
+        var Porc        = ( (1-(191.41/220)) * 100 ).toFixed(2)
+        var Ganhou      = ( (220-191.41)/4.4 ).toFixed(1)
+
+        Resultado.innerHTML = `Ao comprar <b>50</b> passagens, você pagou <b>${Porc}%</b> a menos.
+                               É como se tivesse ganhado <b>${Ganhou}</b> passagens de bônus`
+
+    }
+</script>

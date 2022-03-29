@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="Resultado"> Porções de pão francês: 0 <br>
+                         Porções de carne boniva: 0 <br>
+                         Porções de carne de soja: 0 <br>
+                         Porções de arroz com feijão: 0 <br>
+                         Total de calorias: 0   </div>
+
+    <button onclick="Pao()">
+        Comer um Pão francês
+    </button>
+
+    <button onclick="CarneBoi()">
+        Comer porção de carne boniva
+    </button>
+
+    <button onclick="CarneSoja()">
+        Comer porção de carne de soja
+    </button>
+
+    <button onclick="Arroz()">
+        Comer porção de arroz com feijão
+    </button>
+
+    <button onclick="Recomecar()">
+        Recomeçar
+    </button>
+</body>
+</html>
+
+<script>
+    var P       = 0
+    var CB      = 0
+    var CS      = 0
+    var A       = 0
+    var Total   = 0
+
+    function Pao(){
+        P++
+        Total += 50
+    
+        Resultado.innerHTML = `Porções de pão francês: ${P} <br>
+                               Porções de carne boniva: ${CB} <br>
+                               Porções de carne de soja: ${CS} <br>
+                               Porções de arroz com feijão: ${A} <br>
+                               Total de calorias: ${Total}   `
+    }
+
+    function CarneBoi(){
+        CB++
+        Total += 100
+    
+        Resultado.innerHTML = `Porções de pão francês: ${P} <br>
+                               Porções de carne boniva: ${CB} <br>
+                               Porções de carne de soja: ${CS} <br>
+                               Porções de arroz com feijão: ${A} <br>
+                               Total de calorias: ${Total}   `
+    }
+
+    function CarneSoja(){
+        CS++
+        Total += 30
+        
+        Resultado.innerHTML = `Porções de pão francês: ${P} <br>
+                               Porções de carne boniva: ${CB} <br>
+                               Porções de carne de soja: ${CS} <br>
+                               Porções de arroz com feijão: ${A} <br>
+                               Total de calorias: ${Total}   `
+    }
+
+    function Arroz(){
+        A++
+        Total += 120
+
+        Resultado.innerHTML = `Porções de pão francês: ${P} <br>
+                               Porções de carne boniva: ${CB} <br>
+                               Porções de carne de soja: ${CS} <br>
+                               Porções de arroz com feijão: ${A} <br>
+                               Total de calorias: ${Total}   `
+
+    }
+
+    function Recomecar(){
+        P = 0
+        CB = 0 
+        CS = 0 
+        A = 0
+        Total = 0
+
+        Resultado.innerHTML = `Porções de pão francês: 0 <br>
+                               Porções de carne boniva: 0 <br>
+                               Porções de carne de soja: 0 <br>
+                               Porções de arroz com feijão: 0 <br>
+                               Total de calorias: 0   `
+    }
+
+</script>

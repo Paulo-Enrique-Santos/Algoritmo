@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe seu Salário: <input id="Salario" type="text"> <br>
+    <button onclick="Grana()">Confirmar Salário</button> 
+    <div id="GranaAtual"></div>
+    <div id="Botoes"></div>
+    <span id="GranaATUALIZADA" style="color: white;"></span>
+</body>
+</html>
+
+<script>
+    function Grana(){
+    var Sal = Number(Salario.value).toLocaleString("PT-BR", {style :'currency', currency: "BRL"});
+    GranaAtual.innerHTML=`
+    Grana atual: ${Sal}<br> `
+    GranaATUALIZADA.innerHTML=`
+    ${Number(Salario.value)}`
+    Botoes.innerHTML=`
+    <button onclick="PagarC()">Pagar Conta de 100</button>
+    <button onclick="PagarQ()">Pagar Conta de 500</button>
+    <button onclick="Ganhar()">Ganhar 2000 na Loteria</button>`
+    }
+
+    function PagarC(){
+        var GranaAtt = Number(GranaATUALIZADA.innerHTML);
+        var Conta    = GranaAtt - 100;
+        var GranaAtt2 = Conta.toLocaleString("PT-BR", {style :'currency', currency: "BRL"})
+        GranaATUALIZADA.innerHTML=`
+        ${Conta}`
+        GranaAtual.innerHTML=`
+        Grana atual: ${GranaAtt2}<br> `
+
+    }
+
+    function PagarQ(){        
+        var GranaAtt = Number(GranaATUALIZADA.innerHTML);
+        var Conta    = GranaAtt - 500;
+        var GranaAtt2 = Conta.toLocaleString("PT-BR", {style :'currency', currency: "BRL"})
+        GranaATUALIZADA.innerHTML=`
+        ${Conta}`
+        GranaAtual.innerHTML=`
+        Grana atual: ${GranaAtt2}<br> `
+    }
+
+    function Ganhar(){        
+        var GranaAtt = Number(GranaATUALIZADA.innerHTML);
+        var Conta    = GranaAtt + 2000;
+        var GranaAtt2 = Conta.toLocaleString("PT-BR", {style :'currency', currency: "BRL"})
+        GranaATUALIZADA.innerHTML=`
+        ${Conta}`
+        GranaAtual.innerHTML=`
+        Grana atual: ${GranaAtt2}<br> `
+    }
+
+</script>

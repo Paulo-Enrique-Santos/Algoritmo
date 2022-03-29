@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calcule a Progressão Geométrica</h1>
+    Informe o Primeiro numero da Progressão: <input type="text" id="Progressao"> <br>
+    Informe a Razão <input type="text" id="Razao"> <br>
+    Qual termo Deseja ver <input type="text" id="Termo"> <br>
+    <button onclick="Calculo()">Calcular PG</button>
+    <div id="Resultado"></div>
+
+</body>
+</html>
+
+<script>
+    function Calculo(){
+        var Result = Number( Progressao.value * Razao.value ** (Termo.value - 1) )
+
+        Resultado.innerHTML = `O ${Termo.value}º termo nessa PG será ${Result}`
+    }
+</script>

@@ -1,0 +1,4 @@
+Começar escrevendo ! e dar enter para abrir o html padrão
+Falar o local da função pelo número de linhas 
+Procurar usar sempre o inpecionar para testar código (CONSOLE)
+Lembrar sempre de trocar a linguagem no html padrão 

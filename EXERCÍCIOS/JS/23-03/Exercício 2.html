@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="display: flex;
+            justify-content: center;
+            height: 100vh;
+            width: 100wh;
+                margin: 0;">
+
+    <div style="align-items: center;
+                display: flex;
+                flex-direction: column;
+                width: 20vw;
+                margin: auto;
+                text-align: center;
+                border: 2px solid black;
+                padding: 2vh;
+                border-radius: 3vh;">
+
+        <h1 style="margin: 0;">Simule o Seguro</h1>
+
+        Informe Quantas infrações você cometeu: <br>
+        <input type="text" id="Infracao"><br>
+
+        Informe o valor do carro: <br>
+        <input type="text" id="Carro"> <br>
+
+        <button onclick="Calcular()">
+            Calcular Seguro
+        </button>   
+    </div>
+
+</body>
+</html>
+
+<script>
+    function Calcular(){
+        var Infra = Number(Infracao.value)
+        var Car   = Number(Carro.value)
+        var Seguro = Car * 0.015
+        if(Infra < 3){
+            
+            Seguro *= 0.9
+        }
+        alert(`O valor do seu seguro é: ${Seguro}`)
+    }
+</script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="Resultado">Valor guardado no cofrinho: R$0.00</div>
+    Informe o Valor a ser Depositado: <input type="text" id="Valor"> <br>
+    <button onclick="Depositar()">
+        Depositar
+    </button>
+
+    <button onclick="TirarGrana()">
+        Tirar toda a Grana
+    </button>
+
+</body>
+</html>
+
+<script>
+    var Grana = 0
+
+    function Depositar (){
+        Grana += Number(Valor.value)
+
+        Resultado.innerHTML = `Valor guardado no cofrinho: ${Grana.toLocaleString("PT-BR", {style:'currency', currency:'BRL' })}`
+    }
+
+    function TirarGrana(){
+        Grana = 0
+
+        Resultado.innerHTML = `Valor guardado no cofrinho: R$0.00` 
+    }
+
+</script>

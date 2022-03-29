@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+<body>
+    Informe a sua idade: <br>
+    <input type="text" id="Idade"> <br>
+    <button onclick="Calcular()">
+        Avaliar Aluno
+    </button>
+
+    <div id="Resultado"></div>
+</body>
+</html>
+
+<script>
+
+    function Calcular(){
+        var VarIdade = Number(Idade.value)
+        var Conta = (VarIdade/18)*100
+
+        if(VarIdade>=18){
+            Resultado.innerHTML=`FULANO vamos tirar a CNH?`
+        }else{
+            Resultado.innerHTML=`FULANO, você possui ${Conta.toFixed(2)}% da idade necessária para tirar a CNH, vá jogar Playstation!`
+        }
+    }
+</script>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="PTBR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sono</title>
+</head>
+<body background="https://img.freepik.com/vetores-gratis/colecao-de-nuvens-de-desenho-animado_23-2149021241.jpg?size=626&ext=jpg">
+  
+
+<!-- DIV PAI --------------------------------------------------------------------------------------------->
+<div style="width: 400px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 150px;
+position: relative;
+background-color: #84c2c2;
+border-color: #dcffff;
+border-style: solid;">
+    <h1 style="text-align: center;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-family: cursive;
+    color: #dcffff;">
+    Calculadora de Sono</h1>
+
+    <h4 style="text-align: center;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-family: cursive;
+    color: #dcffff;">
+    Insira quantas horas você dormiu
+    </h4>
+
+    <input type="number"
+    style="margin-bottom: 10px;
+    width: 192px;
+    height: 30px;
+    margin-left: 100px;
+    margin-top: 5px;
+    text-align: center;
+    border-radius: 30px;
+    border-style: solid;
+    border-color: #92d0d0;
+    background-color: #dcffff;
+    outline-color: white;"
+    placeholder="Ex: 8"
+    id="Horas"><br>
+
+    <button style="margin-top: 0px;
+    width: 300px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    height: 40px;
+    border-style:ridge;
+    border-radius: 30px;
+    border-color: #92d0d0;
+    background-color: #dcffff;
+    font-family: cursive;
+    border-style: solid;
+    color: gray;
+    outline-color: white;"
+    onclick="CalcularSono()">
+        Calcular Sono
+    </button>
+
+    <div style="width: 390px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background-color: #84c2c2;
+    border-color: #84c2c2;
+    border-style: solid;"
+    id="Div">
+
+    </div>
+
+</div>    
+</body>
+</html>
+
+<script>
+    function CalcularSono(){
+        var Total   = Number(Horas.value);
+        var F1      = Total*0.05.toFixed(2);
+        var F2      = Total*0.45.toFixed(2);
+        var F3      = Total*0.30.toFixed(2);
+        var F4      = Total*0.30.toFixed(2);
+
+        Div.innerHTML = '<h3 style="text-align: center; margin-top: 5px; margin-bottom: 0px; font-family: cursive; color: #dcffff;"> Ao dormir ' + Total + " horas, você dormiu: </h3><br>" +
+        '<h3 style="text-align: center; margin-top: 0px; margin-bottom: 0px; font-family: cursive; color: #dcffff;">' + F1 + " horas na Fase 1 </h3><br>" +
+        '<h3 style="text-align: center; margin-top: 0px; margin-bottom: 0px; font-family: cursive; color: #dcffff;">' + F2 + " horas na Fase 2 </h3><br>" +
+        '<h3 style="text-align: center; margin-top: 0px; margin-bottom: 0px; font-family: cursive; color: #dcffff;">' + F3 + " horas na Fase 3 </h3><br>" +
+        '<h3 style="text-align: center; margin-top: 0px; margin-bottom: 0px; font-family: cursive; color: #dcffff;">' + F4 + " horas na Fase REM </h3><br>"
+         }
+</script>
