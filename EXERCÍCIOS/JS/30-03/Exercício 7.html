@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+</head>
+<body>
+    Informe a Nota: <br>
+    <input type="text" id="Nota">
+    <br>
+
+    <button onclick="Calcular()">
+        Classificar Aluno
+    </button>
+
+</body>
+</html>
+
+<script>
+    function Calcular(){
+        var N = Number(Nota.value)
+
+        if (N > 95){
+            alert("Aluno fora da curva")
+        } else if(N > 7){
+            alert("Aluno na acima da média")
+        } else if(N >= 5){
+            alert("Aluno na média")
+        } else {
+            alert("Aluno precisa de muita ajuda")
+        }
+    }
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8</title>
+</head>
+<body>
+    <h1>Informe Quanto você consome de cada item por dia</h1>
+    Pão Francês: <input type="text" id="Pao"> <br>
+    Bolacha Recheada: <input type="text" id="Bolacha"> <br>
+    Achocolatado: <input type="text" id="Achocolatado"> <br>
+
+    <button onclick="Calcular()">
+        Verificar Calorias
+    </button>
+
+    <div id="Resultado"></div>
+</body>
+</html>
+
+<script>
+    function Calcular(){
+        var P = Number(Pao.value) * 50
+        var B = Number(Bolacha.value) * 80
+        var A = Number(Achocolatado.value) * 70
+        var Total = P + B + A
+
+        if(Total > 400){
+            Resultado.innerHTML = `Forte tendência á ganhar peso ! <br>
+                                   Está Consumindo ${Total} Calorias por Dia!`
+        } else if( Total > 200){
+            Resultado.innerHTML = `Nem lá, nem cá. Vai manter a forma. <br>
+                                   Está Consumindo ${Total} Calorias por Dia!`
+        } else {
+            Resultado.innerHTML = `Está perdendo peso ! <br>
+                                   Está Consumindo ${Total} Calorias por Dia!`
+        }
+    }
+</script>

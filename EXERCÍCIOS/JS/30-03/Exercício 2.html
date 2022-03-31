@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    Informe sua renda familiar: <br>
+    <input type="text" id="Renda"> <br>
+    <button onclick="Calcular()">
+        Verificar Situação
+    </button>
+
+    <div id="Resultado"></div>
+</body>
+</html>
+
+<script>
+    function Calcular(){
+        var Rent = Number(Renda.value)
+
+        if(Rent > 9500){
+            Resultado.innerHTML = `Classe A`
+        } else if(Rent > 2500){
+            Resultado.innerHTML = `Classe B`
+        } else if(Rent > 900){
+            Resultado.innerHTML = `Classe C`
+        } else if(Rent > 250){
+            Resultado.innerHTML = `Classe D`
+        }else{
+            Resultado.innerHTML = `Classe E`
+        }
+    }
+</script>

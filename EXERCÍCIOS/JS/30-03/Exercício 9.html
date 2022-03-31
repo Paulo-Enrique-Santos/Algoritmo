@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9</title>
+</head>
+<body>
+    <h1>Teste sua Habilidade nos Cliques</h1>
+
+    <button onclick="Clicar()">
+        Clique Aqui
+    </button>
+    <div id="Resultado">Você já clicou <b>0</b> vezes</div>
+</body>
+</html>
+
+<script>
+
+    var Cliques = 0
+
+    function Clicar(){
+        Cliques++
+
+        if(Cliques > 15){
+            Resultado.innerHTML = `Você já clicou <b>${Cliques}</b> vezes <br>
+                                   Mestre dos cliques !!!`
+        } else if (Cliques >= 11){
+            Resultado.innerHTML = `Você já clicou <b>${Cliques}</b> vezes <br>
+                                   Está treinando em casa !`
+        } else if(Cliques >= 5){
+            Resultado.innerHTML = `Você já clicou <b>${Cliques}</b> vezes <br>
+                                   Na média - não me impressiona ...`
+        } else {
+            Resultado.innerHTML = `Você já clicou <b>${Cliques}</b> vezes <br>
+                                   Dedo fraquinho, hein ;(`
+        }
+    }
+</script>
