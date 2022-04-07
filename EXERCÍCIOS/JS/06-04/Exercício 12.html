@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 12</title>
+</head>
+<body>
+    Informe a Nota: <input type="text" id="Nota"> <br>
+    Informe a Frequência:  <input type="text" id="Freq"> <br>
+
+    <button onclick="Calcular()">
+       Analisar Aluno 
+    </button>
+
+    <div id="Resultado"></div>
+</body>
+</html>
+
+<script>
+
+    function Calcular(){
+        var N = Number(Nota.value);
+        var F = Number(Freq.value);
+
+        if(F < 0 || F > 100){
+            alert("Onde já se viu frequência <0 ou >100?!")
+            Resultado.innerHTML = ""
+        } else if(N < 0 || N > 10){
+            alert("Onde já se viu nota <0 ou >10?!")
+            Resultado.innerHTML = ""
+        }else{
+            if(N < 6){
+            Resultado.innerHTML = "Aluno ficou abaixo da média"
+            }else{
+                if(N <=8 && F > 75){
+                    Resultado.innerHTML = `Aluno ficou na média <br>
+                    Aluno aprovado por frequência`
+                }else if(N <=8 && F <= 75){
+                    Resultado.innerHTML = `Aluno ficou na média <br>
+                    Aluno reprovado por frequência`
+                } 
+                
+                if(N > 8 && F > 75){
+                    Resultado.innerHTML = `Aluno acima da média <br>
+                    Aluno aprovado por frequência`
+                }else if(N > 8 && F <= 75){
+                    Resultado.innerHTML = `Aluno acima da média <br>
+                    Aluno reprovado por frequência`
+                }
+
+            }
+
+
+        }
+
+    }
+</script>

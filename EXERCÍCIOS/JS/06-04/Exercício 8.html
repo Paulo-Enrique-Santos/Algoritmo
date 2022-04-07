@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8</title>
+</head>
+<body>
+    Nome Empresa: <input type="text" id="Nome"> <br>
+    Valor da Bolsa da Empresa:  <input type="text" id="Salario"> <br>
+    VR:  <input type="text" id="VRef"> <br>
+    Tempo de Deslocamento da Empresa para a SPTech:  <input type="text" id="Tempo"> <br>
+
+    <button onclick="Calcular()">
+        É Preferida ?
+    </button>
+
+    <div id="Resultado"></div>
+
+</body>
+</html>
+
+<script>
+
+    function  Calcular() {
+
+        if(
+            Number(Salario.value) >= 1800 || 
+            Number(VRef.value) >= 20 ||
+            Number(Tempo.value) <= 30 
+        ){
+                Resultado.innerHTML = `A empresa ${Nome.value} é uma de suas preferências`;
+        } else {
+                Resultado.innerHTML = `A empresa ${Nome.value} está fora da sua lista`;
+        }
+
+
+    }
+</script>

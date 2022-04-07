@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11</title>
+</head>
+<body>
+    
+    <select name="Ano" id="Ano">
+        <option value="Janeiro">Janeiro</option>
+        <option value="Fevereiro">Fevereiro</option>
+        <option value="Março">Março</option>
+        <option value="Abril">Abril</option>
+        <option value="Maio">Maio</option>
+        <option value="Junho">Junho</option>
+        <option value="Julio">Julio</option>
+        <option value="Agosto">Agosto</option>
+        <option value="Setembro">Setembro</option>
+        <option value="Outubro">Outubro</option>
+        <option value="Novembro">Novembro</option>
+        <option value="Dezembro">Dezembro</option>
+    </select>
+
+    <br>
+
+    <button onclick="VerEstacao()">
+        Ver Estação
+    </button>
+
+    <div id="Resultado"></div>
+
+</body>
+</html>
+
+<script>
+    function VerEstacao(){
+        var Selecionado = Ano.value
+
+        if(Selecionado == "Dezembro" || Selecionado == "Janeiro"  || Selecionado == "Fevereiro"){
+            Resultado.innerHTML = `<img src="https://st2.depositphotos.com/1814366/5882/i/600/depositphotos_58822525-stock-photo-winter-nature-landscape.jpg">`
+        } else if (Selecionado == "Março" || Selecionado == "Abril"  || Selecionado == "Maio" ){
+            Resultado.innerHTML = `<img src="https://s2.static.brasilescola.uol.com.br/img/2019/09/primavera.jpg">`
+        } else if (Selecionado == "Junho" || Selecionado == "Julho"  || Selecionado == "Agosto" ){
+            Resultado.innerHTML = `<img src="https://s1.static.brasilescola.uol.com.br/galeria/images/2d28fe1a3b1ed960bca2e3798803c6b5.jpg">`
+        } else {
+            Resultado.innerHTML = `<img src="https://s3.static.brasilescola.uol.com.br/be/2021/03/outono.jpg">`
+        }
+    }
+
+    function VerEstacaoAntigo(){
+        var Selecionado = Ano.value
+
+        if(Selecionado == "Dezembro"){
+            Resultado.innerHTML = `<img src="https://st2.depositphotos.com/1814366/5882/i/600/depositphotos_58822525-stock-photo-winter-nature-landscape.jpg">`
+        } else if (Selecionado == "Janeiro"){
+            Resultado.innerHTML = `<img src="https://st2.depositphotos.com/1814366/5882/i/600/depositphotos_58822525-stock-photo-winter-nature-landscape.jpg">`
+        } else if (Selecionado == "Fevereiro"){
+            Resultado.innerHTML = `<img src="https://st2.depositphotos.com/1814366/5882/i/600/depositphotos_58822525-stock-photo-winter-nature-landscape.jpg">`
+        } else if (Selecionado == "Março"){
+            Resultado.innerHTML = `<img src="https://s2.static.brasilescola.uol.com.br/img/2019/09/primavera.jpg">`
+        } else if (Selecionado == "Abril"){
+            Resultado.innerHTML = `<img src="https://s2.static.brasilescola.uol.com.br/img/2019/09/primavera.jpg">`
+        } else if (Selecionado == "Maio"){
+            Resultado.innerHTML = `<img src="https://s2.static.brasilescola.uol.com.br/img/2019/09/primavera.jpg">`
+        } else if (Selecionado == "Junho"){
+            Resultado.innerHTML = `<img src="https://s1.static.brasilescola.uol.com.br/galeria/images/2d28fe1a3b1ed960bca2e3798803c6b5.jpg">`
+        } else if (Selecionado == "Julho"){
+            Resultado.innerHTML = `<img src="https://s1.static.brasilescola.uol.com.br/galeria/images/2d28fe1a3b1ed960bca2e3798803c6b5.jpg">`
+        } else if (Selecionado == "Agosto"){
+            Resultado.innerHTML = `<img src="https://s1.static.brasilescola.uol.com.br/galeria/images/2d28fe1a3b1ed960bca2e3798803c6b5.jpg">`
+        } else if (Selecionado == "Setembro"){
+            Resultado.innerHTML = `<img src="https://s3.static.brasilescola.uol.com.br/be/2021/03/outono.jpg">`
+        } else if (Selecionado == "Outubro"){
+            Resultado.innerHTML = `<img src="https://s3.static.brasilescola.uol.com.br/be/2021/03/outono.jpg">`
+        } else if (Selecionado == "Novembro"){
+            Resultado.innerHTML = `<img src="https://s3.static.brasilescola.uol.com.br/be/2021/03/outono.jpg">`
+        }
+
+
+
+
+
+
+    }
+</script>

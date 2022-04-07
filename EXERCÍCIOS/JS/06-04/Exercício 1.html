@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+<body>
+    Informe sua Idade: <input type="text" id="Idade"> <br>
+    Informe seu Peso:  <input type="text" id="Peso"> <br>
+
+    <button onclick="Calcular()">
+        Pode Brincar ?
+    </button>
+
+    <div id="Resultado"></div>
+
+</body>
+</html>
+
+<script>
+
+    function  Calcular() {
+        var VIdade= Number(Idade.value);
+        var VPeso = Number(Peso.value);
+
+        if(VIdade > 15 && 
+           VPeso <= 100){
+                Resultado.innerHTML = `Você poderá brincar`;
+        } else if (VIdade <= 15 || 
+                   VPeso > 100) {
+                        Resultado.innerHTML = `Você não poderá brincar`;
+        }
+
+
+    }
+</script>

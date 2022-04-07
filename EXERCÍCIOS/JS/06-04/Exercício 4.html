@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+</head>
+<body>
+    <select name="Cafe" id="Cafe">
+        <option value="Ovos">Ovos</option>
+        <option value="LeiteDeArroz">Leite de Arroz</option>
+        <option value="Bacon">Bacon</option>
+    </select>
+    <br>
+    <select name="Almoco" id="Almoco">
+        <option value="Bife">Bife</option>
+        <option value="HamburguerSoja">Hamburguer de Soja</option>
+        <option value="FrangoGrelhado">Frango Grelhado</option>
+    </select>
+    <br>
+    <select name="Jantar" id="Jantar">
+        <option value="Picanha">Picanha de Soja</option>
+        <option value="Cupim">Cupim</option>
+        <option value="Coracao">Coraçao</option>
+    </select>
+    <br>
+    <button onclick="Calcular()">
+        Sou Vegano ? 
+    </button>
+</body>
+</html>
+
+<script>
+
+    function Calcular(){
+        if(
+            Cafe.value == "LeiteDeArroz" &&
+            Almoco.value == "HamburguerSoja" &&
+            Jantar.value == "Picanha"
+            ){
+                alert("Sim, você é vegano!");
+        }else {
+                alert("Não, você não é vegano!");
+        }
+    }
+</script>

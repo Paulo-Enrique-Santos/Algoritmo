@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+</head>
+<body>
+    Informe a Temperatura: <input type="text" id="Temp"> <br>
+    Informe a Umidade do Ar :  <input type="text" id="Umi"> <br>
+
+    <button onclick="Calcular()">
+       Avaliar Clima 
+    </button>
+
+    <div id="Resultado"></div>
+</body>
+</html>
+
+<script>
+
+    function Calcular(){
+        var Temperatura = Number(Temp.value);
+        var Umidade = Number(Umi.value);
+
+        if(Umidade < 0 || Umidade > 100){
+            alert("Valor de umidade inválido")
+            Resultado.innerHTML = ""
+        }else{
+            if(
+                Temperatura >= 22 &&
+                Temperatura <= 23 &&
+                Umidade     < 60 
+            ){
+                Resultado.innerHTML = "Clima agradável"
+            }else{
+                Resultado.innerHTML = "Clima desconfortável"
+            }
+        }
+    }
+</script>

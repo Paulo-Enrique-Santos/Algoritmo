@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+</head>
+<body>
+    Informe sua Renda Individual: <input type="text" id="Renda"> <br>
+    Informe seu Renda Familiar:  <input type="text" id="RendaF"> <br>
+
+    <button onclick="Calcular()">
+       Terei o Benefício? 
+    </button>
+
+</body>
+</html>
+
+<script>
+
+    function Calcular(){
+        if( 
+        Number(Renda.value) <= 2000 &&
+        Number(RendaF.value) <= 3000    
+        ){
+            alert("Você terá direito ao auxílio");
+        } else {
+            alert("Sem direito ao auxílio");
+        }
+
+    }
+</script>

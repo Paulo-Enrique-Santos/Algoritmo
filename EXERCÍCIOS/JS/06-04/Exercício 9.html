@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9</title>
+</head>
+<body>
+    <select name="Tipo" id="Tipo">
+        <option value="Integral">Integral</option>
+        <option value="Branco">Branco</option>
+    </select>
+    <br>
+    Tempo de Cozimento:  <input type="text" id="Cozi"> <br>
+    Quantidade de Sal:  <input type="text" id="Sal"> <br>
+
+    <button onclick="Calcular()">
+        Avaliar arroz
+    </button>
+
+    <div id="Resultado"></div>
+
+
+</body>
+</html>
+
+<script>
+
+    function  Calcular() {
+
+        if(Number(Cozi.value) == 10 || Number(Cozi.value) == 20){
+            if(
+                Tipo.value == "Branco" &&
+                Number(Sal.value) <= 10 
+            ){
+                    Resultado.innerHTML = `Arroz perfeito <br>
+                    <img src="https://img.itdg.com.br/tdg/images/recipes/000/000/770/323683/323683_original.jpg">`;
+            } 
+            if(
+                Tipo.value == "Integral" &&
+                Number(Sal.value) <= 15 
+            ){
+                    Resultado.innerHTML = `Arroz perfeito <br>
+                    <img src="https://static1.conquistesuavida.com.br/articles//9/13/74/9/@/32682-conheca-dicas-simples-de-como-fazer-arro-article_block_media-2.jpg">`;
+            }
+        }else{
+            Resultado.innerHTML = `Seu arroz não está perfeito <br>
+                    <img src="https://noticiasdatv.uol.com.br/media/_versions/erick-jacquin-freezer-bronca-pesadelo-na-cozinha-reproducao-band-min_fixed_large.jpg">`;
+        }
+
+    }
+</script>

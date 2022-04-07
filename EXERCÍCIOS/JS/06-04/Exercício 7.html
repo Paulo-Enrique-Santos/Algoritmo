@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+</head>
+<body>
+    <div id="Resultado">Você já clicou <b>0</b> vezes</div>
+    
+    <button onclick="Clicar()">
+        Clique cabalístico
+    </button>
+</body>
+</html>
+
+<script>
+
+    var Cliques = 0
+
+    function Clicar(){
+        Cliques++
+        Resultado.innerHTML = `Você já clicou <b>${Cliques}</b> vezes <br>`
+
+        if(
+            Cliques == 3 ||
+            Cliques == 4 ||
+            Cliques == 7 ||
+            Cliques == 10
+        ){
+            alert(`Você clicou ${Cliques} vezes e Juliana gosta desse número!`);
+        }
+
+}
+</script>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 13</title>
+</head>
+<body>
+    Informe a Nota da Avaliação: <input type="text" id="Nota"> <br>
+
+    <button onclick="Calcular()">
+       Avaliar 
+    </button>
+
+    <div id="Resultado"></div>
+</body>
+</html>
+
+<script>
+
+    function Calcular(){
+        var N = Number(Nota.value);
+
+        if(N < 0 || N > 5){
+            alert("Nota inválida. Digite de 0 a 5");
+            Resultado.innerHTML = ""
+        }else{
+            if(N == 5){
+                Resultado.innerHTML = `<img src="Fotos/5 stars.png">`
+            } else if(N >= 4.5){
+                Resultado.innerHTML = `<img src="Fotos/4-5 stars.png">`
+            } else if(N >= 4){
+                Resultado.innerHTML = `<img src="Fotos/4 stars.png">`
+            } else if(N >= 3.5){
+                Resultado.innerHTML = `<img src="Fotos/3-5 stars.png">`
+            } else if(N >= 3){
+                Resultado.innerHTML = `<img src="Fotos/3 stars.png">`
+            } else if(N >= 2.5){
+                Resultado.innerHTML = `<img src="Fotos/2-5 stars.png">`
+            } else if(N >= 2){
+                Resultado.innerHTML = `<img src="Fotos/2 stars.png">`
+            } else if(N >= 1.5){
+                Resultado.innerHTML = `<img src="Fotos/1-5 stars.png">`
+            } else if(N >= 1){
+                Resultado.innerHTML = `<img src="Fotos/1 stars.png">`
+            } else if(N >= 0.5){
+                Resultado.innerHTML = `<img src="Fotos/0-5 stars.png">`
+            } else {
+                Resultado.innerHTML = `<img src="Fotos/0 stars.png">`
+            }
+        }
+
+    }
+</script>
