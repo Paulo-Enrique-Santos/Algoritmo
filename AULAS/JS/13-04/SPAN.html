@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Frase: <input onkeyup="validar_textos()" id="input_frase"/><br/>
+
+    Tamanho do texto: <span id="span_tamanho_texto">0</span><br/>
+
+    Primeira Letra: <span id="span_primeira_letra"></span><br/>
+
+    Ultima Letra: <span id="span_ultima_letra"></span><br/>
+
+    Email valido?: <span id="span_tem_arroba">Não</span><br/>
+
+    Começa com P ?: <span id="span_comeca_correto">Não</span><br/>
+
+    Termina com .com.br: <span id="span_termina_correto">Não</span><br/>
+
+    Frase, em minúsculo: <span id="span_frase_minusculo"></span><br/>
+
+    Frase, em maiusculo: <span id="span_frase_maiusculo"></span><br/>
+</body>
+</html>
+
+<script>
+    function validar_textos(){
+        var frase = input_frase.value;
+
+        span_tamanho_texto.innerHTML = frase.length
+
+        span_primeira_letra.innerHTML = frase[0]
+
+        span_ultima_letra.innerHTML = frase[frase.length - 1]
+
+        if(frase.indexOf("@") > -1){
+            span_tem_arroba.innerHTML = "Sim"
+        }else{
+            span_tem_arroba.innerHTML = "Não"
+        }
+
+        span_frase_minusculo.innerHTML = frase.toLowerCase()
+
+        span_frase_maiusculo.innerHTML = frase.toUpperCase()
+
+        if(frase.toLowerCase().endsWith("sptech.school") == true){
+            span_termina_correto.innerHTML = "Sim"
+        } else {
+            span_termina_correto.innerHTML = "Não"
+        }
+
+        if(frase.toLowerCase().startsWith("p") == true){
+            span_comeca_correto.innerHTML = "Sim"
+        } else {
+            span_comeca_correto.innerHTML = "Não"
+        }
+
+    }
+
+</script>
