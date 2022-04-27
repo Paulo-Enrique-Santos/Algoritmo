@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Triatlo</title>
+  </head>
+  <body>
+    Nome do atleta: <input id="in_nome_atleta" /><br />
+    Idade do atleta: <input id="in_idade_atleta" /><br />
+    <select id="select_lista_modalidades">
+      <option value="correr">Correr</option>
+      <option value="nadar">Nadar</option>
+      <option value="pedalar">Pedalar</option>
+    </select>
+    <br />
+    <button id="btn_praticar_esporte" onclick="praticar_esporte()">Praticar esporte</button>
+    <br />
+    <div id="div_placar">
+        Atleta: <b id="b_nome_atleta"></b> - Idade: <b id="b_idade_atleta"></b>anos
+        <br>
+        Km correndo: <span id="span_km_correndo">0</span> (<span id="span_porc_km_correndo">0.00</span>%)
+        <br>
+        Km nadando: <span id="span_km_nadando">0</span> (<span id="span_porc_km_nadando">0.00</span>%)
+        <br>
+        Km pedalando: <span id="span_km_pedalando">0</span> (<span id="span_porc_km_pedalando">0.00</span>%)
+        <br>
+        Km total: <span id="span_km_total">0.0</span>
+    </div>
+    <div id="div_mensagem_erro">
+    </div>
+  </body>
+</html>
+
+<script>
+
+    var correndo = 0;
+    var nadando = 0;
+    var pedalando = 0;
+    var total = 0;
+
+  function praticar_esporte(){
+
+    var nome = in_nome_atleta.value
+    var idade = Number(in_idade_atleta.value)
+    var modal = select_lista_modalidades.value
+
+    if(nome.length == 0){
+      div_mensagem_erro.innerHTML = `Nome em branco não será aceito`
+    } else if(idade == 0){
+      div_mensagem_erro.innerHTML = `Idade em branco não será aceita`
+    } else if(nome.length < 3){
+      div_mensagem_erro.innerHTML = `Nome muito curto`
+    } else if(idade < 18 || idade > 80){
+      div_mensagem_erro.innerHTML = `Intervalo incorreto para idade`
+    } else {
+      b_nome_atleta.innerHTML = nome.toUpperCase()
+      b_idade_atleta.innerHTML = `${idade} `
+      if(modal == "correr"){
+        correndo += 1.5
+        total = correndo + nadando + pedalando
+        Atualizar()
+      } else if(modal == "nadar"){
+        nadando += 1.5
+        total = correndo + nadando + pedalando
+        Atualizar()
+      } else {
+        pedalando += 1.5
+        total = correndo + nadando + pedalando
+        Atualizar()
+      }
+
+    }
+
+  }
+
+  function Atualizar (){
+    span_km_total.innerHTML = total
+
+    span_km_correndo.innerHTML = correndo
+    span_porc_km_correndo.innerHTML = ((correndo / total) * 100).toFixed(2)
+
+    span_km_nadando.innerHTML = nadando
+    span_porc_km_nadando.innerHTML = ((nadando / total) * 100).toFixed(2)
+
+    span_km_pedalando.innerHTML = pedalando
+    span_porc_km_pedalando.innerHTML = ((pedalando / total) * 100).toFixed(2)
+
+  }
+
+</script>
