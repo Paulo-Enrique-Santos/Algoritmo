@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Desafio</title>
+</head>
+<body>
+    URL da Imagem: <input type="text" id="url"> <br>
+    Quantas Imagens Exibir: <input type="text" id="qtdft"> <br>
+    Quantas Imagens por Linha: <input type="text" id="imgL"> <br>
+    <button onclick="ver()">Ver Imagens</button>
+
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+
+    function ver(){
+        resultado.innerHTML = ""
+        var contador = 1
+        var QTD = Number(qtdft.value)
+        var IL = Number(imgL.value)
+
+        while(contador <= QTD){
+            resultado.innerHTML += `<img src="${url.value}">`
+            if(contador % IL == 0){
+                resultado.innerHTML += `<br>`
+            }
+            contador++
+        }
+
+    }
+</script>

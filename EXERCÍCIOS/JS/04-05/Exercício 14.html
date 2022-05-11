@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 14</title>
+</head>
+<body>
+    Informe sua Idade:<input type="text" id="dias"><br>
+    <button onclick="contar()">Exibir rotina mensal</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+
+    function contar(){
+        var contador = 1
+        var V = Number(voltas.value)
+
+        while (contador <=  30){
+            
+            resultado.innerHTML += `Carro dando a ${contador}ª volta<br>`
+
+            contador++
+        }
+    }
+</script>
