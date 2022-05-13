@@ -7,8 +7,7 @@
     <title>Exercício 14</title>
 </head>
 <body>
-    Informe sua Idade:<input type="text" id="dias"><br>
-    <button onclick="contar()">Exibir rotina mensal</button>
+    Informe sua Idade:<input onkeyup="contar()" type="text" id="dias"><br>
     <div id="resultado"></div>
 </body>
 </html>
@@ -16,14 +15,24 @@
 <script>
 
     function contar(){
-        var contador = 1
-        var V = Number(voltas.value)
-
-        while (contador <=  30){
-            
-            resultado.innerHTML += `Carro dando a ${contador}ª volta<br>`
-
-            contador++
+        var V = Number(dias.value)
+        resultado.innerHTML = ""
+        for (var i = 0; i <= V ; i++){
+            if(i <= 4){
+                resultado.innerHTML+= `${i} anos (Primeira Infância)<br>`
+            } else if( i <= 6){
+                resultado.innerHTML+= `${i} anos (Pré-Escolar)<br>`
+            } else if(i <=10){
+                resultado.innerHTML+= `${i} anos (Segunda Infância)<br>`
+            } else if(i <=18){
+                resultado.innerHTML+= `${i} anos (Adolescência)<br>`
+            } else if(i <=50){
+                resultado.innerHTML+= `${i} anos (Adulto)<br>`
+            }  else if(i <=100){
+                resultado.innerHTML+= `${i} anos (Melhor idade)<br>`
+            } else {
+                resultado.innerHTML+= `${i} anos (Matusalém)<br>`
+            }
         }
     }
 </script>

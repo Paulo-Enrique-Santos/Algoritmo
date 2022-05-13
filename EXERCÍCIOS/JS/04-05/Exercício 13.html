@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 12</title>
+    <title>Exercício 13</title>
 </head>
 <body>
-    Informe quantos dias você faz musculação:<input type="text" id="dias"><br>
+    Informe de quantos em quantos dias você faz musculação:<input type="text" id="dias"><br>
     <button onclick="contar()">Exibir rotina mensal</button>
     <div id="resultado"></div>
 </body>
@@ -16,14 +16,14 @@
 <script>
 
     function contar(){
-        var contador = 1
-        var V = Number(voltas.value)
-
-        while (contador <=  30){
-            
-            resultado.innerHTML += `Carro dando a ${contador}ª volta<br>`
-
-            contador++
-        }
+        var D = Number(dias.value);
+        for (var i = 1; i <= 30 ; i++){
+                if(i % D == 1){
+                    resultado.innerHTML += `Dia ${i} - Musculação <br>`
+                } else {
+                    resultado.innerHTML += `Dia ${i} - Comer, dormir etc <br>`
+                }
+            }
+        
     }
 </script>

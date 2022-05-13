@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 18</title>
+</head>
+<body>
+    Quantos Ônibus:<input type="text" id="onibus"><br>
+    Quantos Trens:<input type="text" id="trens"><br>
+    Quantos Metrôs:<input type="text" id="metros"><br>
+    <button onclick="contar()">#Partiu Trajeto</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+
+    function contar(){
+        resultado.innerHTML = ""
+
+        for (var i = 1; i <= Number(onibus.value) ; i++){
+            resultado.innerHTML += `<span style="color:red;">Pegando o ${i}º busão</span><br>`
+        }
+        for (var i = 1; i <= Number(trens.value) ; i++){
+            resultado.innerHTML += `<span style="color:green;">Pegando o ${i}º trens</span><br>`
+        }
+        for (var i = 1; i <= Number(metros.value) ; i++){
+            resultado.innerHTML += `<span style="color:blue;">Pegando o ${i}º metrô</span><br>`
+        }
+    }
+</script>

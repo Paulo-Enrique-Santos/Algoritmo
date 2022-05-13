@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 21</title>
+</head>
+<body>
+    Limite Inferior: <input type="text" id="inf">
+    Limite Superior: <input type="text" id="sup">
+    Divisibilidade: <input type="text" id="div">
+    <button onclick="contar()">Contar</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+
+    function contar(){
+        resultado.innerHTML = ""
+
+        if(Number(inf.value) < 1){
+            alert('Limite inferior não pode ser menor que zero')
+        } else if (Number(sup.value)>100){
+            alert('Limite superior não pode maior que 100')
+        } else if (Number(div.value) < 3 || Number(div.value) > 10) {
+            alert('Divisor tem que estar entre 3 e 10')
+        } else {
+            for (var i = Number(inf.value); i <= Number(sup.value) ; i++){
+                if(i % Number(div.value) == 0){
+                    resultado.innerHTML += `${i}<br>`
+                }
+            }
+        }
+    }
+</script>

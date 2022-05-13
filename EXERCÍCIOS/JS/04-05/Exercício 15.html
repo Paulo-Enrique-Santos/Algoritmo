@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 15</title>
+</head>
+<body>
+    Quantos Elefântes:<input onkeyup="contar()" type="text" id="dias"><br>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+
+    function contar(){
+        var V = Number(dias.value)
+        resultado.innerHTML = ""
+        for (var i = 2; i <= V ; i++){
+            resultado.innerHTML+=`1 elefante incomoda muita gente! <br>`
+            resultado.innerHTML+=`${i} elefantes,`
+            for(var t = 1; t <= i; t++)
+            {
+                resultado.innerHTML+=` incomoda `
+            }
+            resultado.innerHTML+=`muito mais <br>`
+        }
+    }
+</script>
