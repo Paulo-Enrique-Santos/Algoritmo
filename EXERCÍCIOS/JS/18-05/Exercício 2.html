@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    Insira os Lugares que você Viajou:<input type="text" id="input_viagens">
+    <button onclick="Cadastrar()">
+        Cadastrar Local
+    </button> <br> 
+    Relembre a Viagem: <input type="text" id="input_relembrar">
+    <button onclick="Relembrar()">
+        Relembrar
+    </button> 
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+
+    var array = []
+
+    function Cadastrar(){
+        var viagens = input_viagens.value;
+
+        array.push(viagens);
+
+        alert('Local Cadastrado!');
+    }
+
+    function Relembrar(){
+        var viagem = input_relembrar.value;
+
+        if(viagem > array.length){
+            resultado.innerHTML = `Você não fez uma ${viagem}ª viagem!`
+        } else {
+            resultado.innerHTML = `A viagem para ${array[viagem-1]} foi muito boa!` 
+        }
+
+    }
+</script>

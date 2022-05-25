@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9</title>
+</head>
+<body>
+    Digite um número qualquer:<input type="text" id="input_aluno">
+    <button onclick="Cadastrar()">
+        Analisar Histórico
+    </button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+
+    var array = []
+
+    function Cadastrar(){
+        var aluno = Number(input_aluno.value);
+        var maior = 0;
+        var menor = "";
+
+        resultado.innerHTML = ""
+
+        array.push(aluno);
+
+        for( var i = 0; i < array.length ; i ++){
+            if(array[i] > maior){
+                maior = array[i];
+            } 
+
+            if(menor == ""){
+                menor = array[i];
+            } else if(array[i]< menor){
+                menor = array[i];
+            }
+            resultado.innerHTML += `${i+1}º Número: ${array[i]}<br>`
+        }
+
+        resultado.innerHTML += `Maior: ${maior}<br>
+                                Menor: ${menor}<br>`
+
+    }
+</script>

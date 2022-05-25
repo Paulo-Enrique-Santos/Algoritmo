@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9</title>
+</head>
+<body>
+    Insira o Nome das Linhas:<input type="text" id="input_aluno">
+    <button onclick="Cadastrar()">
+        Gravar Busão
+    </button>
+    <button onclick="Pesquisar()">
+        Pesquisar
+    </button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+
+    var array = []
+
+    function Cadastrar(){
+        var aluno = input_aluno.value;
+
+        resultado.innerHTML = ""
+
+        array.push(aluno);
+        for( var i = 0; i < array.length ; i ++){
+            resultado.innerHTML += `${array[i]}<br>`
+        }
+    }
+
+    function Pesquisar(){
+        var aluno = input_aluno.value;
+        var encontrou = 0;
+        var ordem = [];
+
+        for( var i = 0 ; i < array.length ; i ++){
+            if(aluno == array[i]){
+                encontrou ++;
+                ordem.push(i+1);
+            }
+        }
+        if(encontrou == 0){
+            alert(`Você nunca pegou essa linha`);
+        }else{
+            alert(` Você já pegou essa linha ${encontrou} vezes, nessa ordem: ${ordem}`);
+        }
+    }
+
+</script>
